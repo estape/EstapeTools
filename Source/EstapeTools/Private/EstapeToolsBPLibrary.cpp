@@ -106,11 +106,18 @@ bool UEstapeToolsBPLibrary::Texture2DParseColors(UTexture2D* Texture, TArray<FCo
         return false;
     }
 
-    FTexture2DMipMap& MipMap = Texture->GetPlatformData()->Mips[0];
+    FTexturePlatformData* PlatformData = Texture->GetPlatformData();
+    if (!PlatformData || PlatformData->Mips.Num() == 0)
+    {
+        return false;
+    }
+
+    FTexture2DMipMap& MipMap = PlatformData->Mips[0];
     void* Data = MipMap.BulkData.Lock(LOCK_READ_ONLY);
 
     int32 localWidth = MipMap.SizeX;
     int32 localHeight = MipMap.SizeY;
+
     OutColors.SetNum(localWidth * localHeight);
 
     FColor* FormattedImageData = static_cast<FColor*>(Data);

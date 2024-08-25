@@ -20,19 +20,22 @@ public class EstapeTools : ModuleRules
 				// ... add other private include paths required here ...
 			}
 			);
-			
-		
-		PublicDependencyModuleNames.AddRange(
-			new string[]
-			{
-				"Core",
+
+
+        PublicDependencyModuleNames.AddRange(
+            new string[]
+            {
+                "Core",
                 "EngineSettings",
-				// ... add other public dependencies that you statically link with here ...
-			}
-			);
-			
-		
-		PrivateDependencyModuleNames.AddRange(
+                "RenderCore",    // Dependência para renderização
+                "RHI",           // Render Hardware Interface
+                "Engine",        // Módulo principal da Unreal Engine
+                "CoreUObject"    // Módulo para o sistema de objetos e reflexão
+            }
+        );
+
+
+        PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
 				"CoreUObject",
