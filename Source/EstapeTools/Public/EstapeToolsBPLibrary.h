@@ -74,14 +74,6 @@ class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (Keywords = "Colors Bytes Array Texture"))
 	static TArray<FColor> BytesToColors(const TArray<uint8>& Bytes);
 
-	// Convert a texture to an array of colors.
-    UFUNCTION(BlueprintCallable, Category = "EstapeTools|Texture", meta = (Keywords = "Texture Colors convert parse"))
-    static bool Texture2DParseColors(UTexture2D* Texture, TArray<FColor>& OutColors, int32& Width, int32& Height);
-
-	// Convert an array of colors in format of UE5 Texture to a texture.
-    UFUNCTION(BlueprintCallable, Category = "EstapeTools|Texture", meta = (Keywords = "Texture Colors convert parse"))
-    static UTexture2D* ColorsParseTexture2D(const TArray<FColor>& Colors, int32 Width, int32 Height);
-
 	//Convert an array of Linear Colors to an array of Colors.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Texture", meta = (CompactNodeTitle = "ToArrayLinearColor", Keywords = "Linear Colors convert parse"))
     static TArray<FLinearColor> ArrayColorToArrayLinearColor(const TArray<FColor>& Colors);

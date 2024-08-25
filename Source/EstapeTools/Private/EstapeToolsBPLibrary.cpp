@@ -4,7 +4,6 @@
 #include "EstapeToolsBPLibrary.h"
 #include "EstapeTools.h"
 #include "Misc/FileHelper.h"
-#include "Engine/Texture2D.h"
 
 UEstapeToolsBPLibrary::UEstapeToolsBPLibrary(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
@@ -97,81 +96,6 @@ int32 UEstapeToolsBPLibrary::HexToDec(const FString& HexString)
     }
 
     return DecimalValue;
-}
-
-bool UEstapeToolsBPLibrary::Texture2DParseColors(UTexture2D* Texture, TArray<FColor>& OutColors, int32& Width, int32& Height)
-{
-    if (!Texture || !Texture->GetPlatformData())
-    {
-        return false;
-    }
-
-    FTexturePlatformData* PlatformData = Texture->GetPlatformData();
-    if (!PlatformData || PlatformData->Mips.Num() == 0)
-    {
-        return false;
-    }
-
-    FTexture2DMipMap& MipMap = PlatformData->Mips[0];
-    void* Data = MipMap.BulkData.Lock(LOCK_READ_ONLY);
-
-    int32 localWidth = MipMap.SizeX;
-    int32 localHeight = MipMap.SizeY;
-
-    OutColors.SetNum(localWidth * localHeight);
-
-    FColor* FormattedImageData = static_cast<FColor*>(Data);
-
-    for (int32 Y = 0; Y < localHeight; Y++)
-    {
-        for (int32 X = 0; X < localWidth; X++)
-        {
-            int32 Index = Y * localWidth + X;
-            OutColors[Index] = FormattedImageData[Index];
-        }
-    }
-
-    MipMap.BulkData.Unlock();
-    Width = localWidth;
-    Height = localHeight;
-
-    return true;
-}
-
-UTexture2D* UEstapeToolsBPLibrary::ColorsParseTexture2D(const TArray<FColor>& Colors, int32 Width, int32 Height)
-{
-    if (Colors.Num() == 0)
-    {
-        return nullptr;
-    }
-
-    if (Width <= 0 || Height <= 0)
-    {
-        return nullptr;
-    }
-
-    UTexture2D* Texture = UTexture2D::CreateTransient(Width, Height);
-    if (!Texture)
-    {
-        return nullptr;
-    }
-
-    FTexturePlatformData* PlatformData = Texture->GetPlatformData();
-    if (!PlatformData)
-    {
-        return nullptr;
-    }
-
-    FTexture2DMipMap& MipMap = PlatformData->Mips[0];
-    void* Data = MipMap.BulkData.Lock(LOCK_READ_WRITE);
-
-    FColor* TextureData = static_cast<FColor*>(Data);
-    FMemory::Memcpy(TextureData, Colors.GetData(), Colors.Num() * sizeof(FColor));
-
-    MipMap.BulkData.Unlock();
-    Texture->UpdateResource();
-
-    return Texture;
 }
 
 TArray<uint8> UEstapeToolsBPLibrary::ColorsToBytes(const TArray<FColor>& Colors)

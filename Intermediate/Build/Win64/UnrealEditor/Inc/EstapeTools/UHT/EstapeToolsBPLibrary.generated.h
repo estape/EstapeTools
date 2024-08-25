@@ -9,7 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UTexture2D;
 struct FColor;
 struct FLinearColor;
 #ifdef ESTAPETOOLS_EstapeToolsBPLibrary_generated_h
@@ -20,8 +19,6 @@ struct FLinearColor;
 #define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_47_RPC_WRAPPERS \
 	DECLARE_FUNCTION(execArrayLinearColorToArrayColor); \
 	DECLARE_FUNCTION(execArrayColorToArrayLinearColor); \
-	DECLARE_FUNCTION(execColorsParseTexture2D); \
-	DECLARE_FUNCTION(execTexture2DParseColors); \
 	DECLARE_FUNCTION(execBytesToColors); \
 	DECLARE_FUNCTION(execColorsToBytes); \
 	DECLARE_FUNCTION(execHexToDec); \

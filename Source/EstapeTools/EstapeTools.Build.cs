@@ -1,4 +1,4 @@
-// Some copyright should be here...
+// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
 using UnrealBuildTool;
 
@@ -27,10 +27,6 @@ public class EstapeTools : ModuleRules
             {
                 "Core",
                 "EngineSettings",
-                "RenderCore",    // Dependência para renderização
-                "RHI",           // Render Hardware Interface
-                "Engine",        // Módulo principal da Unreal Engine
-                "CoreUObject"    // Módulo para o sistema de objetos e reflexão
             }
         );
 
