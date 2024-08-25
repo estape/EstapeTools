@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.4",
+	"FriendlyName": "EstapeTools",
+	"Description": "A pack with essential nodes to improve your workflow and development.",
+	"Category": "Blueprints",
+	"CreatedBy": "Rodrigo Estape",
+	"CreatedByURL": "http://estapetools.000.pe/",
+	"DocsURL": "http://estapetools.000.pe/",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e1a5a090592c454c816b40452e8cc8de",
+	"SupportURL": "",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "EstapeTools",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux"
+			]
+		}
+	]
+}
