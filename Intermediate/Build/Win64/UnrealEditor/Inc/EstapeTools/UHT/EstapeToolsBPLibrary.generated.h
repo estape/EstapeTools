@@ -19,12 +19,12 @@ struct FLinearColor;
 #define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_47_RPC_WRAPPERS \
 	DECLARE_FUNCTION(execArrayLinearColorToArrayColor); \
 	DECLARE_FUNCTION(execArrayColorToArrayLinearColor); \
+	DECLARE_FUNCTION(execConvertBytesToString); \
+	DECLARE_FUNCTION(execConvertStringToBytes); \
 	DECLARE_FUNCTION(execBytesToColors); \
 	DECLARE_FUNCTION(execColorsToBytes); \
-	DECLARE_FUNCTION(execHexToDec); \
-	DECLARE_FUNCTION(execDecToHex); \
-	DECLARE_FUNCTION(execReadCLUTData); \
-	DECLARE_FUNCTION(execWriteCLUTData); \
+	DECLARE_FUNCTION(execHexadecimalToDecimal); \
+	DECLARE_FUNCTION(execDecimalToHexadecimal); \
 	DECLARE_FUNCTION(execGetNewLine);
 
 

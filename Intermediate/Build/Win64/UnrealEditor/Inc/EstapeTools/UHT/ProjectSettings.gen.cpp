@@ -27,8 +27,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetAllowClose_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Allow Close bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Allow Close Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Allow Close bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -75,8 +81,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetAllowMaximize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Allow Maximize bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Allow Maximize Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Allow Maximize bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -123,8 +135,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetAllowMinimize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Allow Minimize bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Allow Minimize Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Allow Minimize bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -171,8 +189,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetAllowWindowResize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Allow Window Resize bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Allow Window Resize Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Allow Window Resize bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -219,8 +243,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetBorderlessWindow_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Borderless Window bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Borderless Window Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Borderless Window bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -267,8 +297,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetCompanyDistinguishedName_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Company Distinguished Name string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Company Distinguished Name Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Company Distinguished Name string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -310,8 +346,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetCompanyName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Company Name string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Company Name Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Company Name string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -353,8 +395,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetCopyrightNotice_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Copyright Notice string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Copyright Notice Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Copyright Notice string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -386,6 +434,55 @@ DEFINE_FUNCTION(UProjectSettings::execGetCopyrightNotice)
 }
 // End Class UProjectSettings Function GetCopyrightNotice
 
+// Begin Class UProjectSettings Function GetEngineVersion
+struct Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics
+{
+	struct ProjectSettings_eventGetEngineVersion_Parms
+	{
+		FString ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Unreal Engine Version in string value.\n" },
+#endif
+		{ "Keywords", "Get Engine Version" },
+		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Unreal Engine Version in string value." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ProjectSettings_eventGetEngineVersion_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UProjectSettings, nullptr, "GetEngineVersion", nullptr, nullptr, Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::PropPointers), sizeof(Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::ProjectSettings_eventGetEngineVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14042401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::Function_MetaDataParams), Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::ProjectSettings_eventGetEngineVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UProjectSettings_GetEngineVersion()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UProjectSettings_GetEngineVersion_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UProjectSettings::execGetEngineVersion)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=UProjectSettings::GetEngineVersion();
+	P_NATIVE_END;
+}
+// End Class UProjectSettings Function GetEngineVersion
+
 // Begin Class UProjectSettings Function GetHomePage
 struct Z_Construct_UFunction_UProjectSettings_GetHomePage_Statics
 {
@@ -396,8 +493,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetHomePage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Home Page string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Home Page Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Home Page string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -439,8 +542,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetLicensingTerms_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Licensing Terms string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Licensing Terms Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Licensing Terms string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -482,8 +591,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetPrivacyPolicy_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Privacy Policy string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Privacy Policy Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Privacy Policy string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -525,8 +640,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetProjectDebugTitleInfo_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Project Debug Title Info string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Debug Title Info Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Project Debug Title Info string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
@@ -568,8 +689,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetProjectDescription_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Description string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Description string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -611,8 +738,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetProjectDisplayedTitle_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Project Debug Displayed string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Displayed Title Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Project Debug Displayed string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
@@ -654,8 +787,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetProjectID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Project ID GUID value from Project Description.\n" },
+#endif
+		{ "Keywords", "Project ID GUID Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Project ID GUID value from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
@@ -697,7 +836,7 @@ struct Z_Construct_UFunction_UProjectSettings_GetProjectName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+		{ "Keywords", "Project Name Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
 	};
 #endif // WITH_METADATA
@@ -740,8 +879,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetProjectVersion_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Project Version string from Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Project Version string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -783,8 +928,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetStartVR_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Start in VR bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project VR Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Start in VR bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -831,8 +982,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetSupportContact_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Support Contact string from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Support Contact Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Support Contact string from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
@@ -874,8 +1031,14 @@ struct Z_Construct_UFunction_UProjectSettings_GetWindowPreserveAspectRatio_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Return Window Preserve Aspect Radio bool from Project Description.\n" },
+#endif
+		{ "Keywords", "Project Window Preserve Aspect Ratio Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Return Window Preserve Aspect Radio bool from Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_ReturnValue_SetBit(void* Obj);
@@ -922,8 +1085,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetAllowClose_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Allow Close bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Allow Close bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_AllowClose_SetBit(void* Obj);
@@ -971,8 +1140,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetAllowMaximize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Allow Maximize bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Allow Maximize bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_AllowMaximize_SetBit(void* Obj);
@@ -1020,8 +1195,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetAllowMinimize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Allow Minimize bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Allow Minimize bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_AllowMinimize_SetBit(void* Obj);
@@ -1069,8 +1250,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetAllowWindowResize_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Allow Window Resize bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Allow Window Resize bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_AllowWindowResize_SetBit(void* Obj);
@@ -1118,8 +1305,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetBorderlessWindow_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Borderless Window bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Borderless Window bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_BorderlessWindow_SetBit(void* Obj);
@@ -1167,8 +1360,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetCompanyDistinguishedName_Static
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Company Distinguished Name string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Company Distinguished Name string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CompanyDistinguishedName_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1214,8 +1413,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetCompanyName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Company Name string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Company Name string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CompanyName_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1261,8 +1466,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetCopyrightNotice_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Copyright Notice string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Copyright Notice string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CopyrightNotice_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1308,8 +1519,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetHomePage_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Home Page string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Home Page string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HomePage_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1355,8 +1572,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetLicensingTerms_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Licensing Terms string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Licensing Terms string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LicensingTerms_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1402,8 +1625,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetPrivacyPolicy_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Privacy Policy string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Privacy Policy string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PrivacyPolicy_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1449,8 +1678,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetProjectDebugTitleInfo_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Project Debug Title Info string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Project Debug Title Info string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectDebugTitleInfo_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1496,8 +1731,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetProjectDescription_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
-		{ "Keywords", "Project Version Description Configuration" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Description string in Project Description.\n" },
+#endif
+		{ "Keywords", "Project Project Description Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Description string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Description_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1543,8 +1784,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetProjectDisplayedTitle_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Project Debug Displayed string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Project Debug Displayed string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectDisplayedTitle_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1591,8 +1838,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetProjectID_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Project ID GUID value in Project Description and return GUID generated in string.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Project ID GUID value in Project Description and return GUID generated in string." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectID_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1647,8 +1900,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetProjectName_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Project Name string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Project Name string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectName_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1694,8 +1953,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetProjectVersion_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Project Version string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Project Version string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectVersion_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1741,8 +2006,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetStartVR_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Start VR bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Start VR bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_StartVR_SetBit(void* Obj);
@@ -1790,8 +2061,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetSupportContact_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Support Contact string in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Support Contact string in Project Description." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SupportContact_MetaData[] = {
 		{ "NativeConst", "" },
@@ -1837,8 +2114,14 @@ struct Z_Construct_UFunction_UProjectSettings_SetWindowPreserveAspectRatio_Stati
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "EstapeTools|Project|Settings" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Set Window Preserve Aspect Radio bool in Project Description.\n" },
+#endif
 		{ "Keywords", "Project Version Description Configuration" },
 		{ "ModuleRelativePath", "Public/ProjectSettings.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Set Window Preserve Aspect Radio bool in Project Description." },
+#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_WindowPreserveAspectRatio_SetBit(void* Obj);
@@ -1889,6 +2172,7 @@ void UProjectSettings::StaticRegisterNativesUProjectSettings()
 		{ "GetCompanyDistinguishedName", &UProjectSettings::execGetCompanyDistinguishedName },
 		{ "GetCompanyName", &UProjectSettings::execGetCompanyName },
 		{ "GetCopyrightNotice", &UProjectSettings::execGetCopyrightNotice },
+		{ "GetEngineVersion", &UProjectSettings::execGetEngineVersion },
 		{ "GetHomePage", &UProjectSettings::execGetHomePage },
 		{ "GetLicensingTerms", &UProjectSettings::execGetLicensingTerms },
 		{ "GetPrivacyPolicy", &UProjectSettings::execGetPrivacyPolicy },
@@ -1942,46 +2226,47 @@ struct Z_Construct_UClass_UProjectSettings_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UProjectSettings_GetAllowClose, "GetAllowClose" }, // 3953507058
-		{ &Z_Construct_UFunction_UProjectSettings_GetAllowMaximize, "GetAllowMaximize" }, // 306335496
-		{ &Z_Construct_UFunction_UProjectSettings_GetAllowMinimize, "GetAllowMinimize" }, // 1632915810
-		{ &Z_Construct_UFunction_UProjectSettings_GetAllowWindowResize, "GetAllowWindowResize" }, // 3956298399
-		{ &Z_Construct_UFunction_UProjectSettings_GetBorderlessWindow, "GetBorderlessWindow" }, // 3314193414
-		{ &Z_Construct_UFunction_UProjectSettings_GetCompanyDistinguishedName, "GetCompanyDistinguishedName" }, // 2230824617
-		{ &Z_Construct_UFunction_UProjectSettings_GetCompanyName, "GetCompanyName" }, // 3681225091
-		{ &Z_Construct_UFunction_UProjectSettings_GetCopyrightNotice, "GetCopyrightNotice" }, // 1278843544
-		{ &Z_Construct_UFunction_UProjectSettings_GetHomePage, "GetHomePage" }, // 1312074228
-		{ &Z_Construct_UFunction_UProjectSettings_GetLicensingTerms, "GetLicensingTerms" }, // 3502532845
-		{ &Z_Construct_UFunction_UProjectSettings_GetPrivacyPolicy, "GetPrivacyPolicy" }, // 3602376273
-		{ &Z_Construct_UFunction_UProjectSettings_GetProjectDebugTitleInfo, "GetProjectDebugTitleInfo" }, // 3960896683
-		{ &Z_Construct_UFunction_UProjectSettings_GetProjectDescription, "GetProjectDescription" }, // 3695928524
-		{ &Z_Construct_UFunction_UProjectSettings_GetProjectDisplayedTitle, "GetProjectDisplayedTitle" }, // 822983635
-		{ &Z_Construct_UFunction_UProjectSettings_GetProjectID, "GetProjectID" }, // 1196365164
-		{ &Z_Construct_UFunction_UProjectSettings_GetProjectName, "GetProjectName" }, // 3253936878
-		{ &Z_Construct_UFunction_UProjectSettings_GetProjectVersion, "GetProjectVersion" }, // 2784697659
-		{ &Z_Construct_UFunction_UProjectSettings_GetStartVR, "GetStartVR" }, // 2838242651
-		{ &Z_Construct_UFunction_UProjectSettings_GetSupportContact, "GetSupportContact" }, // 2236635174
-		{ &Z_Construct_UFunction_UProjectSettings_GetWindowPreserveAspectRatio, "GetWindowPreserveAspectRatio" }, // 1017768825
-		{ &Z_Construct_UFunction_UProjectSettings_SetAllowClose, "SetAllowClose" }, // 1455375904
-		{ &Z_Construct_UFunction_UProjectSettings_SetAllowMaximize, "SetAllowMaximize" }, // 3676335311
-		{ &Z_Construct_UFunction_UProjectSettings_SetAllowMinimize, "SetAllowMinimize" }, // 3764507626
-		{ &Z_Construct_UFunction_UProjectSettings_SetAllowWindowResize, "SetAllowWindowResize" }, // 2104019189
-		{ &Z_Construct_UFunction_UProjectSettings_SetBorderlessWindow, "SetBorderlessWindow" }, // 2931735193
-		{ &Z_Construct_UFunction_UProjectSettings_SetCompanyDistinguishedName, "SetCompanyDistinguishedName" }, // 1094521673
-		{ &Z_Construct_UFunction_UProjectSettings_SetCompanyName, "SetCompanyName" }, // 2183566441
-		{ &Z_Construct_UFunction_UProjectSettings_SetCopyrightNotice, "SetCopyrightNotice" }, // 294693694
-		{ &Z_Construct_UFunction_UProjectSettings_SetHomePage, "SetHomePage" }, // 1851359730
-		{ &Z_Construct_UFunction_UProjectSettings_SetLicensingTerms, "SetLicensingTerms" }, // 1702885465
-		{ &Z_Construct_UFunction_UProjectSettings_SetPrivacyPolicy, "SetPrivacyPolicy" }, // 2861174615
-		{ &Z_Construct_UFunction_UProjectSettings_SetProjectDebugTitleInfo, "SetProjectDebugTitleInfo" }, // 2603720827
-		{ &Z_Construct_UFunction_UProjectSettings_SetProjectDescription, "SetProjectDescription" }, // 382775928
-		{ &Z_Construct_UFunction_UProjectSettings_SetProjectDisplayedTitle, "SetProjectDisplayedTitle" }, // 4095788022
-		{ &Z_Construct_UFunction_UProjectSettings_SetProjectID, "SetProjectID" }, // 1334998878
-		{ &Z_Construct_UFunction_UProjectSettings_SetProjectName, "SetProjectName" }, // 303143955
-		{ &Z_Construct_UFunction_UProjectSettings_SetProjectVersion, "SetProjectVersion" }, // 2377578550
-		{ &Z_Construct_UFunction_UProjectSettings_SetStartVR, "SetStartVR" }, // 1400738656
-		{ &Z_Construct_UFunction_UProjectSettings_SetSupportContact, "SetSupportContact" }, // 1018905940
-		{ &Z_Construct_UFunction_UProjectSettings_SetWindowPreserveAspectRatio, "SetWindowPreserveAspectRatio" }, // 73390805
+		{ &Z_Construct_UFunction_UProjectSettings_GetAllowClose, "GetAllowClose" }, // 1936651721
+		{ &Z_Construct_UFunction_UProjectSettings_GetAllowMaximize, "GetAllowMaximize" }, // 1972147168
+		{ &Z_Construct_UFunction_UProjectSettings_GetAllowMinimize, "GetAllowMinimize" }, // 3834117774
+		{ &Z_Construct_UFunction_UProjectSettings_GetAllowWindowResize, "GetAllowWindowResize" }, // 320991132
+		{ &Z_Construct_UFunction_UProjectSettings_GetBorderlessWindow, "GetBorderlessWindow" }, // 3070229642
+		{ &Z_Construct_UFunction_UProjectSettings_GetCompanyDistinguishedName, "GetCompanyDistinguishedName" }, // 670985125
+		{ &Z_Construct_UFunction_UProjectSettings_GetCompanyName, "GetCompanyName" }, // 3337937478
+		{ &Z_Construct_UFunction_UProjectSettings_GetCopyrightNotice, "GetCopyrightNotice" }, // 607973731
+		{ &Z_Construct_UFunction_UProjectSettings_GetEngineVersion, "GetEngineVersion" }, // 1841641155
+		{ &Z_Construct_UFunction_UProjectSettings_GetHomePage, "GetHomePage" }, // 186181513
+		{ &Z_Construct_UFunction_UProjectSettings_GetLicensingTerms, "GetLicensingTerms" }, // 1155614918
+		{ &Z_Construct_UFunction_UProjectSettings_GetPrivacyPolicy, "GetPrivacyPolicy" }, // 3268827704
+		{ &Z_Construct_UFunction_UProjectSettings_GetProjectDebugTitleInfo, "GetProjectDebugTitleInfo" }, // 146298757
+		{ &Z_Construct_UFunction_UProjectSettings_GetProjectDescription, "GetProjectDescription" }, // 2393323609
+		{ &Z_Construct_UFunction_UProjectSettings_GetProjectDisplayedTitle, "GetProjectDisplayedTitle" }, // 1871105995
+		{ &Z_Construct_UFunction_UProjectSettings_GetProjectID, "GetProjectID" }, // 1044742745
+		{ &Z_Construct_UFunction_UProjectSettings_GetProjectName, "GetProjectName" }, // 813437061
+		{ &Z_Construct_UFunction_UProjectSettings_GetProjectVersion, "GetProjectVersion" }, // 3740396603
+		{ &Z_Construct_UFunction_UProjectSettings_GetStartVR, "GetStartVR" }, // 975005388
+		{ &Z_Construct_UFunction_UProjectSettings_GetSupportContact, "GetSupportContact" }, // 2269284352
+		{ &Z_Construct_UFunction_UProjectSettings_GetWindowPreserveAspectRatio, "GetWindowPreserveAspectRatio" }, // 3708040694
+		{ &Z_Construct_UFunction_UProjectSettings_SetAllowClose, "SetAllowClose" }, // 4253722227
+		{ &Z_Construct_UFunction_UProjectSettings_SetAllowMaximize, "SetAllowMaximize" }, // 262489655
+		{ &Z_Construct_UFunction_UProjectSettings_SetAllowMinimize, "SetAllowMinimize" }, // 2663448651
+		{ &Z_Construct_UFunction_UProjectSettings_SetAllowWindowResize, "SetAllowWindowResize" }, // 3600657693
+		{ &Z_Construct_UFunction_UProjectSettings_SetBorderlessWindow, "SetBorderlessWindow" }, // 1260292358
+		{ &Z_Construct_UFunction_UProjectSettings_SetCompanyDistinguishedName, "SetCompanyDistinguishedName" }, // 3957440404
+		{ &Z_Construct_UFunction_UProjectSettings_SetCompanyName, "SetCompanyName" }, // 3595213615
+		{ &Z_Construct_UFunction_UProjectSettings_SetCopyrightNotice, "SetCopyrightNotice" }, // 1185757713
+		{ &Z_Construct_UFunction_UProjectSettings_SetHomePage, "SetHomePage" }, // 3855780003
+		{ &Z_Construct_UFunction_UProjectSettings_SetLicensingTerms, "SetLicensingTerms" }, // 2426189227
+		{ &Z_Construct_UFunction_UProjectSettings_SetPrivacyPolicy, "SetPrivacyPolicy" }, // 162967376
+		{ &Z_Construct_UFunction_UProjectSettings_SetProjectDebugTitleInfo, "SetProjectDebugTitleInfo" }, // 1824744450
+		{ &Z_Construct_UFunction_UProjectSettings_SetProjectDescription, "SetProjectDescription" }, // 4118705141
+		{ &Z_Construct_UFunction_UProjectSettings_SetProjectDisplayedTitle, "SetProjectDisplayedTitle" }, // 3806621058
+		{ &Z_Construct_UFunction_UProjectSettings_SetProjectID, "SetProjectID" }, // 2730838204
+		{ &Z_Construct_UFunction_UProjectSettings_SetProjectName, "SetProjectName" }, // 3456397846
+		{ &Z_Construct_UFunction_UProjectSettings_SetProjectVersion, "SetProjectVersion" }, // 671946360
+		{ &Z_Construct_UFunction_UProjectSettings_SetStartVR, "SetStartVR" }, // 3426109983
+		{ &Z_Construct_UFunction_UProjectSettings_SetSupportContact, "SetSupportContact" }, // 3533749224
+		{ &Z_Construct_UFunction_UProjectSettings_SetWindowPreserveAspectRatio, "SetWindowPreserveAspectRatio" }, // 2545727353
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -2030,10 +2315,10 @@ UProjectSettings::~UProjectSettings() {}
 struct Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UProjectSettings, UProjectSettings::StaticClass, TEXT("UProjectSettings"), &Z_Registration_Info_UClass_UProjectSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProjectSettings), 3775244232U) },
+		{ Z_Construct_UClass_UProjectSettings, UProjectSettings::StaticClass, TEXT("UProjectSettings"), &Z_Registration_Info_UClass_UProjectSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UProjectSettings), 2818789502U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_636236059(TEXT("/Script/EstapeTools"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_4268948610(TEXT("/Script/EstapeTools"),
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -238,7 +238,7 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayColorToArrayLinearColor_
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Texture" },
+		{ "Category", "EstapeTools|Utilities|Array" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Convert an array of Linear Colors to an array of Colors.\n" },
 #endif
@@ -302,7 +302,7 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayLinearColorToArrayColor_
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Texture" },
+		{ "Category", "EstapeTools|Utilities|Array" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Convert an array of Colors to an array of Linear Colors.\n" },
 #endif
@@ -370,6 +370,7 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToColors_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Convert Bytes array to Color array (8-Bit).\n" },
 #endif
+		{ "CompactNodeTitle", "BytesToColors" },
 		{ "Keywords", "Colors Bytes Array Texture" },
 		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
 #if !UE_BUILD_SHIPPING
@@ -433,6 +434,7 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ColorsToBytes_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Convert Color array (8-Bit) to Bytes array.\n" },
 #endif
+		{ "CompactNodeTitle", "ColorsToBytes" },
 		{ "Keywords", "Colors Bytes Array Texture" },
 		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
 #if !UE_BUILD_SHIPPING
@@ -482,10 +484,126 @@ DEFINE_FUNCTION(UEstapeToolsBPLibrary::execColorsToBytes)
 }
 // End Class UEstapeToolsBPLibrary Function ColorsToBytes
 
-// Begin Class UEstapeToolsBPLibrary Function DecToHex
-struct Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics
+// Begin Class UEstapeToolsBPLibrary Function ConvertBytesToString
+struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics
 {
-	struct EstapeToolsBPLibrary_eventDecToHex_Parms
+	struct EstapeToolsBPLibrary_eventConvertBytesToString_Parms
+	{
+		TArray<uint8> input;
+		FString ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|Utilities" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Convert bytes array to string data.\n" },
+#endif
+		{ "CompactNodeTitle", "BytesToString" },
+		{ "KeyWords", "parse, convertion, string, bytes" },
+		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Convert bytes array to string data." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_input_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_input;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::NewProp_input_Inner = { "input", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::NewProp_input = { "input", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventConvertBytesToString_Parms, input), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventConvertBytesToString_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::NewProp_input_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::NewProp_input,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "ConvertBytesToString", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::EstapeToolsBPLibrary_eventConvertBytesToString_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::EstapeToolsBPLibrary_eventConvertBytesToString_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEstapeToolsBPLibrary::execConvertBytesToString)
+{
+	P_GET_TARRAY(uint8,Z_Param_input);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=UEstapeToolsBPLibrary::ConvertBytesToString(Z_Param_input);
+	P_NATIVE_END;
+}
+// End Class UEstapeToolsBPLibrary Function ConvertBytesToString
+
+// Begin Class UEstapeToolsBPLibrary Function ConvertStringToBytes
+struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics
+{
+	struct EstapeToolsBPLibrary_eventConvertStringToBytes_Parms
+	{
+		FString input;
+		TArray<uint8> ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|Utilities" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Convert String data to bytes array.\n" },
+#endif
+		{ "CompactNodeTitle", "StringToBytes" },
+		{ "KeyWords", "parse, convertion, string, bytes" },
+		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Convert String data to bytes array." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_input;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::NewProp_input = { "input", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventConvertStringToBytes_Parms, input), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventConvertStringToBytes_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::NewProp_input,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::NewProp_ReturnValue_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "ConvertStringToBytes", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::EstapeToolsBPLibrary_eventConvertStringToBytes_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::EstapeToolsBPLibrary_eventConvertStringToBytes_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEstapeToolsBPLibrary::execConvertStringToBytes)
+{
+	P_GET_PROPERTY(FStrProperty,Z_Param_input);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<uint8>*)Z_Param__Result=UEstapeToolsBPLibrary::ConvertStringToBytes(Z_Param_input);
+	P_NATIVE_END;
+}
+// End Class UEstapeToolsBPLibrary Function ConvertStringToBytes
+
+// Begin Class UEstapeToolsBPLibrary Function DecimalToHexadecimal
+struct Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics
+{
+	struct EstapeToolsBPLibrary_eventDecimalToHexadecimal_Parms
 	{
 		int32 Decimal;
 		FString ReturnValue;
@@ -496,7 +614,8 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Convert a decimal value into an integer represented as a hexadecimal string.\n" },
 #endif
-		{ "Keywords", "Decimal Hexadecimal" },
+		{ "CompactNodeTitle", "DecToHex" },
+		{ "Keywords", "Decimal Hexadecimal Dec Hex" },
 		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Convert a decimal value into an integer represented as a hexadecimal string." },
@@ -508,33 +627,33 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::NewProp_Decimal = { "Decimal", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventDecToHex_Parms, Decimal), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventDecToHex_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::NewProp_Decimal,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::NewProp_Decimal = { "Decimal", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventDecimalToHexadecimal_Parms, Decimal), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventDecimalToHexadecimal_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::NewProp_Decimal,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "DecToHex", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::EstapeToolsBPLibrary_eventDecToHex_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::EstapeToolsBPLibrary_eventDecToHex_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "DecimalToHexadecimal", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::EstapeToolsBPLibrary_eventDecimalToHexadecimal_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::EstapeToolsBPLibrary_eventDecimalToHexadecimal_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UEstapeToolsBPLibrary::execDecToHex)
+DEFINE_FUNCTION(UEstapeToolsBPLibrary::execDecimalToHexadecimal)
 {
 	P_GET_PROPERTY(FIntProperty,Z_Param_Decimal);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(FString*)Z_Param__Result=UEstapeToolsBPLibrary::DecToHex(Z_Param_Decimal);
+	*(FString*)Z_Param__Result=UEstapeToolsBPLibrary::DecimalToHexadecimal(Z_Param_Decimal);
 	P_NATIVE_END;
 }
-// End Class UEstapeToolsBPLibrary Function DecToHex
+// End Class UEstapeToolsBPLibrary Function DecimalToHexadecimal
 
 // Begin Class UEstapeToolsBPLibrary Function GetNewLine
 struct Z_Construct_UFunction_UEstapeToolsBPLibrary_GetNewLine_Statics
@@ -549,6 +668,7 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_GetNewLine_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node inserts a new line by moving the remaining string value to the line below.\n" },
 #endif
+		{ "CompactNodeTitle", "GewNewLine" },
 		{ "Keywords", "Get New Line" },
 		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
 #if !UE_BUILD_SHIPPING
@@ -585,10 +705,10 @@ DEFINE_FUNCTION(UEstapeToolsBPLibrary::execGetNewLine)
 }
 // End Class UEstapeToolsBPLibrary Function GetNewLine
 
-// Begin Class UEstapeToolsBPLibrary Function HexToDec
-struct Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics
+// Begin Class UEstapeToolsBPLibrary Function HexadecimalToDecimal
+struct Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics
 {
-	struct EstapeToolsBPLibrary_eventHexToDec_Parms
+	struct EstapeToolsBPLibrary_eventHexadecimalToDecimal_Parms
 	{
 		FString HexString;
 		int32 ReturnValue;
@@ -599,7 +719,8 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Convert a hexadecimal string value into a decimal integer.\n" },
 #endif
-		{ "Keywords", "Hexadecimal Decimal" },
+		{ "CompactNodeTitle", "HexToDec" },
+		{ "Keywords", "Hexadecimal Decimal Hex Dec" },
 		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Convert a hexadecimal string value into a decimal integer." },
@@ -614,169 +735,33 @@ struct Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::NewProp_HexString = { "HexString", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventHexToDec_Parms, HexString), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HexString_MetaData), NewProp_HexString_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventHexToDec_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::NewProp_HexString,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::NewProp_HexString = { "HexString", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventHexadecimalToDecimal_Parms, HexString), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HexString_MetaData), NewProp_HexString_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventHexadecimalToDecimal_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::NewProp_HexString,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "HexToDec", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::EstapeToolsBPLibrary_eventHexToDec_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::EstapeToolsBPLibrary_eventHexToDec_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "HexadecimalToDecimal", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::EstapeToolsBPLibrary_eventHexadecimalToDecimal_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::EstapeToolsBPLibrary_eventHexadecimalToDecimal_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UEstapeToolsBPLibrary::execHexToDec)
+DEFINE_FUNCTION(UEstapeToolsBPLibrary::execHexadecimalToDecimal)
 {
 	P_GET_PROPERTY(FStrProperty,Z_Param_HexString);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(int32*)Z_Param__Result=UEstapeToolsBPLibrary::HexToDec(Z_Param_HexString);
+	*(int32*)Z_Param__Result=UEstapeToolsBPLibrary::HexadecimalToDecimal(Z_Param_HexString);
 	P_NATIVE_END;
 }
-// End Class UEstapeToolsBPLibrary Function HexToDec
-
-// Begin Class UEstapeToolsBPLibrary Function ReadCLUTData
-struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics
-{
-	struct EstapeToolsBPLibrary_eventReadCLUTData_Parms
-	{
-		TArray<uint8> RawData;
-		int32 LenData;
-		TArray<FLinearColor> ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Color" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Read data generated by the 'Write CLUT Data' node or similar back to a linear color format\n" },
-#endif
-		{ "Keywords", "CLUT color" },
-		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Read data generated by the 'Write CLUT Data' node or similar back to a linear color format" },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RawData_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FBytePropertyParams NewProp_RawData_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_RawData;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_LenData;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_RawData_Inner = { "RawData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_RawData = { "RawData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventReadCLUTData_Parms, RawData), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RawData_MetaData), NewProp_RawData_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_LenData = { "LenData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventReadCLUTData_Parms, LenData), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventReadCLUTData_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_RawData_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_RawData,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_LenData,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_ReturnValue_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "ReadCLUTData", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::EstapeToolsBPLibrary_eventReadCLUTData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::EstapeToolsBPLibrary_eventReadCLUTData_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UEstapeToolsBPLibrary::execReadCLUTData)
-{
-	P_GET_TARRAY_REF(uint8,Z_Param_Out_RawData);
-	P_GET_PROPERTY(FIntProperty,Z_Param_LenData);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(TArray<FLinearColor>*)Z_Param__Result=UEstapeToolsBPLibrary::ReadCLUTData(Z_Param_Out_RawData,Z_Param_LenData);
-	P_NATIVE_END;
-}
-// End Class UEstapeToolsBPLibrary Function ReadCLUTData
-
-// Begin Class UEstapeToolsBPLibrary Function WriteCLUTData
-struct Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics
-{
-	struct EstapeToolsBPLibrary_eventWriteCLUTData_Parms
-	{
-		TArray<FLinearColor> Colors;
-		int32 LenData;
-		TArray<uint8> ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Color" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Compress Linear Color data into a 16-byte format. This node enables the creation of a custom CLUT (Color Lookup Table), a technique commonly used in 32-bit consoles. (Colors will be multiplied by 255 before convert). WARNING: Compress a higher image quality may result in a loss of color information (banding).\n" },
-#endif
-		{ "Keywords", "CLUT color" },
-		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Compress Linear Color data into a 16-byte format. This node enables the creation of a custom CLUT (Color Lookup Table), a technique commonly used in 32-bit consoles. (Colors will be multiplied by 255 before convert). WARNING: Compress a higher image quality may result in a loss of color information (banding)." },
-#endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Colors_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Colors_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_Colors;
-	static const UECodeGen_Private::FIntPropertyParams NewProp_LenData;
-	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_Colors_Inner = { "Colors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_Colors = { "Colors", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventWriteCLUTData_Parms, Colors), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Colors_MetaData), NewProp_Colors_MetaData) };
-const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_LenData = { "LenData", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventWriteCLUTData_Parms, LenData), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventWriteCLUTData_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_Colors_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_Colors,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_LenData,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_ReturnValue_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "WriteCLUTData", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::EstapeToolsBPLibrary_eventWriteCLUTData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::EstapeToolsBPLibrary_eventWriteCLUTData_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UEstapeToolsBPLibrary::execWriteCLUTData)
-{
-	P_GET_TARRAY_REF(FLinearColor,Z_Param_Out_Colors);
-	P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_LenData);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(TArray<uint8>*)Z_Param__Result=UEstapeToolsBPLibrary::WriteCLUTData(Z_Param_Out_Colors,Z_Param_Out_LenData);
-	P_NATIVE_END;
-}
-// End Class UEstapeToolsBPLibrary Function WriteCLUTData
+// End Class UEstapeToolsBPLibrary Function HexadecimalToDecimal
 
 // Begin Class UEstapeToolsBPLibrary
 void UEstapeToolsBPLibrary::StaticRegisterNativesUEstapeToolsBPLibrary()
@@ -787,11 +772,11 @@ void UEstapeToolsBPLibrary::StaticRegisterNativesUEstapeToolsBPLibrary()
 		{ "ArrayLinearColorToArrayColor", &UEstapeToolsBPLibrary::execArrayLinearColorToArrayColor },
 		{ "BytesToColors", &UEstapeToolsBPLibrary::execBytesToColors },
 		{ "ColorsToBytes", &UEstapeToolsBPLibrary::execColorsToBytes },
-		{ "DecToHex", &UEstapeToolsBPLibrary::execDecToHex },
+		{ "ConvertBytesToString", &UEstapeToolsBPLibrary::execConvertBytesToString },
+		{ "ConvertStringToBytes", &UEstapeToolsBPLibrary::execConvertStringToBytes },
+		{ "DecimalToHexadecimal", &UEstapeToolsBPLibrary::execDecimalToHexadecimal },
 		{ "GetNewLine", &UEstapeToolsBPLibrary::execGetNewLine },
-		{ "HexToDec", &UEstapeToolsBPLibrary::execHexToDec },
-		{ "ReadCLUTData", &UEstapeToolsBPLibrary::execReadCLUTData },
-		{ "WriteCLUTData", &UEstapeToolsBPLibrary::execWriteCLUTData },
+		{ "HexadecimalToDecimal", &UEstapeToolsBPLibrary::execHexadecimalToDecimal },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -810,15 +795,15 @@ struct Z_Construct_UClass_UEstapeToolsBPLibrary_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayColorToArrayLinearColor, "ArrayColorToArrayLinearColor" }, // 3627453979
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayLinearColorToArrayColor, "ArrayLinearColorToArrayColor" }, // 1208400383
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToColors, "BytesToColors" }, // 1247536535
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ColorsToBytes, "ColorsToBytes" }, // 3691078666
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_DecToHex, "DecToHex" }, // 812159379
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_GetNewLine, "GetNewLine" }, // 2362747976
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_HexToDec, "HexToDec" }, // 4245788583
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ReadCLUTData, "ReadCLUTData" }, // 3094371412
-		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_WriteCLUTData, "WriteCLUTData" }, // 3887913739
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayColorToArrayLinearColor, "ArrayColorToArrayLinearColor" }, // 2877409321
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayLinearColorToArrayColor, "ArrayLinearColorToArrayColor" }, // 3944431486
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToColors, "BytesToColors" }, // 3499322742
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ColorsToBytes, "ColorsToBytes" }, // 2840225786
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString, "ConvertBytesToString" }, // 2557724210
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes, "ConvertStringToBytes" }, // 2126026406
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal, "DecimalToHexadecimal" }, // 2307546783
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_GetNewLine, "GetNewLine" }, // 3727302882
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal, "HexadecimalToDecimal" }, // 3904367630
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -871,10 +856,10 @@ struct Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_E
 		{ EDialogButtonClicked_StaticEnum, TEXT("EDialogButtonClicked"), &Z_Registration_Info_UEnum_EDialogButtonClicked, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1096604047U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEstapeToolsBPLibrary, UEstapeToolsBPLibrary::StaticClass, TEXT("UEstapeToolsBPLibrary"), &Z_Registration_Info_UClass_UEstapeToolsBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEstapeToolsBPLibrary), 3630939880U) },
+		{ Z_Construct_UClass_UEstapeToolsBPLibrary, UEstapeToolsBPLibrary::StaticClass, TEXT("UEstapeToolsBPLibrary"), &Z_Registration_Info_UClass_UEstapeToolsBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEstapeToolsBPLibrary), 2413919463U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_3782477859(TEXT("/Script/EstapeTools"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_3908726401(TEXT("/Script/EstapeTools"),
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::EnumInfo));

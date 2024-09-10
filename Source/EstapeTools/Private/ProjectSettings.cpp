@@ -1,9 +1,9 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
 #include "ProjectSettings.h"
 #include "Misc/Guid.h"
 #include "GeneralProjectSettings.h"
+#include "Misc/EngineVersion.h"
 
 FString UProjectSettings::GetProjectDescription()
 {
@@ -273,4 +273,9 @@ void UProjectSettings::SetAllowMinimize(bool AllowMinimize)
     UGeneralProjectSettings* ProjectSettings = GetMutableDefault<UGeneralProjectSettings>();
     ProjectSettings->bAllowMinimize = AllowMinimize;
     ProjectSettings->SaveConfig();
+}
+
+FString UProjectSettings::GetEngineVersion()
+{
+	return FEngineVersion::Current().ToString();
 }

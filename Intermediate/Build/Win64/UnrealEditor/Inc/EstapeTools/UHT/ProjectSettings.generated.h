@@ -15,7 +15,8 @@ struct FGuid;
 #endif
 #define ESTAPETOOLS_ProjectSettings_generated_h
 
-#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetEngineVersion); \
 	DECLARE_FUNCTION(execSetAllowMinimize); \
 	DECLARE_FUNCTION(execSetAllowMaximize); \
 	DECLARE_FUNCTION(execSetAllowClose); \
@@ -58,7 +59,7 @@ struct FGuid;
 	DECLARE_FUNCTION(execGetProjectDescription);
 
 
-#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUProjectSettings(); \
 	friend struct Z_Construct_UClass_UProjectSettings_Statics; \
@@ -67,7 +68,7 @@ public: \
 	DECLARE_SERIALIZER(UProjectSettings)
 
 
-#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UProjectSettings(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -81,13 +82,13 @@ public: \
 	NO_API virtual ~UProjectSettings();
 
 
-#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_12_PROLOG
-#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_GENERATED_BODY \
+#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_11_PROLOG
+#define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_INCLASS_NO_PURE_DECLS \
-	FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_15_ENHANCED_CONSTRUCTORS \
+	FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_INCLASS_NO_PURE_DECLS \
+	FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_ProjectSettings_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

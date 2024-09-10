@@ -32,7 +32,7 @@ struct Z_Construct_UFunction_UWindowsClass_GetBatteryLevel_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Obtain the laptop battery percentage as a floating-point value. This feature is available only on Windows 10 or later.\n" },
 #endif
-		{ "Keywords", "Battery Windows" },
+		{ "Keywords", "Get Battery Windows" },
 		{ "ModuleRelativePath", "Public/WindowsClass.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Obtain the laptop battery percentage as a floating-point value. This feature is available only on Windows 10 or later." },
@@ -80,11 +80,11 @@ struct Z_Construct_UFunction_UWindowsClass_GetWindowsInfo_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Utilities|Windows" },
+		{ "Category", "EstapeTools|Platforms|Windows" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node will obtain the edition of Windows that is running as the current operating system. It will be checked from Windows 11 or higher down to Windows 2000. \n" },
 #endif
-		{ "Keywords", "Windows info" },
+		{ "Keywords", "Windows info Build SP Service Pack Name Number" },
 		{ "ModuleRelativePath", "Public/WindowsClass.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "This node will obtain the edition of Windows that is running as the current operating system. It will be checked from Windows 11 or higher down to Windows 2000." },
@@ -150,7 +150,7 @@ struct Z_Construct_UFunction_UWindowsClass_IsBatteryCharging_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Return a boolean value indicating whether the laptop battery is charging. This feature is available only on Windows 10 or later.\n" },
 #endif
-		{ "Keywords", "Battery Windows" },
+		{ "Keywords", "Battery Windows Charging Level" },
 		{ "ModuleRelativePath", "Public/WindowsClass.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return a boolean value indicating whether the laptop battery is charging. This feature is available only on Windows 10 or later." },
@@ -295,9 +295,9 @@ struct Z_Construct_UClass_UWindowsClass_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWindowsClass_GetBatteryLevel, "GetBatteryLevel" }, // 3139913631
-		{ &Z_Construct_UFunction_UWindowsClass_GetWindowsInfo, "GetWindowsInfo" }, // 2005734239
-		{ &Z_Construct_UFunction_UWindowsClass_IsBatteryCharging, "IsBatteryCharging" }, // 2347838286
+		{ &Z_Construct_UFunction_UWindowsClass_GetBatteryLevel, "GetBatteryLevel" }, // 2705378514
+		{ &Z_Construct_UFunction_UWindowsClass_GetWindowsInfo, "GetWindowsInfo" }, // 2958933501
+		{ &Z_Construct_UFunction_UWindowsClass_IsBatteryCharging, "IsBatteryCharging" }, // 1200759789
 		{ &Z_Construct_UFunction_UWindowsClass_MessageBox_Windows, "MessageBox_Windows" }, // 481230770
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -347,10 +347,10 @@ UWindowsClass::~UWindowsClass() {}
 struct Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_WindowsClass_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWindowsClass, UWindowsClass::StaticClass, TEXT("UWindowsClass"), &Z_Registration_Info_UClass_UWindowsClass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWindowsClass), 3969663257U) },
+		{ Z_Construct_UClass_UWindowsClass, UWindowsClass::StaticClass, TEXT("UWindowsClass"), &Z_Registration_Info_UClass_UWindowsClass, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWindowsClass), 764903779U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_WindowsClass_h_2567477435(TEXT("/Script/EstapeTools"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_WindowsClass_h_70131012(TEXT("/Script/EstapeTools"),
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_WindowsClass_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_WindowsClass_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

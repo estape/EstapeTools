@@ -9,14 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FLinearColor;
 #ifdef ESTAPETOOLS_FileIO_generated_h
 #error "FileIO.generated.h already included, missing '#pragma once' in FileIO.h"
 #endif
 #define ESTAPETOOLS_FileIO_generated_h
 
 #define FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_FileIO_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execConvertToString); \
-	DECLARE_FUNCTION(execConvertToBytes); \
+	DECLARE_FUNCTION(execReadCLUTData); \
+	DECLARE_FUNCTION(execWriteCLUTData); \
 	DECLARE_FUNCTION(execReadBytesFile); \
 	DECLARE_FUNCTION(execWriteBytesFile); \
 	DECLARE_FUNCTION(execLoadTextArray); \

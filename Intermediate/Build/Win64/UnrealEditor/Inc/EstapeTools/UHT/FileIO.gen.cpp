@@ -10,127 +10,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeFileIO() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 ESTAPETOOLS_API UClass* Z_Construct_UClass_UFileIO();
 ESTAPETOOLS_API UClass* Z_Construct_UClass_UFileIO_NoRegister();
 UPackage* Z_Construct_UPackage__Script_EstapeTools();
 // End Cross Module References
-
-// Begin Class UFileIO Function ConvertToBytes
-struct Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics
-{
-	struct FileIO_eventConvertToBytes_Parms
-	{
-		FString input;
-		TArray<uint8> ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Utilities" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//Convert String data to bytes array.\n" },
-#endif
-		{ "CompactNodeTitle", "ConvertToBytes" },
-		{ "KeyWords", "parse, convertion, string, bytes" },
-		{ "ModuleRelativePath", "Public/FileIO.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Convert String data to bytes array." },
-#endif
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStrPropertyParams NewProp_input;
-	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::NewProp_input = { "input", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventConvertToBytes_Parms, input), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventConvertToBytes_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::NewProp_input,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::NewProp_ReturnValue_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFileIO, nullptr, "ConvertToBytes", nullptr, nullptr, Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::FileIO_eventConvertToBytes_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14042401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::FileIO_eventConvertToBytes_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UFileIO_ConvertToBytes()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFileIO_ConvertToBytes_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UFileIO::execConvertToBytes)
-{
-	P_GET_PROPERTY(FStrProperty,Z_Param_input);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(TArray<uint8>*)Z_Param__Result=UFileIO::ConvertToBytes(Z_Param_input);
-	P_NATIVE_END;
-}
-// End Class UFileIO Function ConvertToBytes
-
-// Begin Class UFileIO Function ConvertToString
-struct Z_Construct_UFunction_UFileIO_ConvertToString_Statics
-{
-	struct FileIO_eventConvertToString_Parms
-	{
-		TArray<uint8> input;
-		FString ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|Utilities" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//Convert bytes array to string data.\n" },
-#endif
-		{ "CompactNodeTitle", "ConvertToString" },
-		{ "KeyWords", "parse, convertion, string, bytes" },
-		{ "ModuleRelativePath", "Public/FileIO.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Convert bytes array to string data." },
-#endif
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FBytePropertyParams NewProp_input_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_input;
-	static const UECodeGen_Private::FStrPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UFileIO_ConvertToString_Statics::NewProp_input_Inner = { "input", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFileIO_ConvertToString_Statics::NewProp_input = { "input", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventConvertToString_Parms, input), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_UFileIO_ConvertToString_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventConvertToString_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFileIO_ConvertToString_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ConvertToString_Statics::NewProp_input_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ConvertToString_Statics::NewProp_input,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ConvertToString_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ConvertToString_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFileIO_ConvertToString_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFileIO, nullptr, "ConvertToString", nullptr, nullptr, Z_Construct_UFunction_UFileIO_ConvertToString_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ConvertToString_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFileIO_ConvertToString_Statics::FileIO_eventConvertToString_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14042401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ConvertToString_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFileIO_ConvertToString_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UFileIO_ConvertToString_Statics::FileIO_eventConvertToString_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UFileIO_ConvertToString()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFileIO_ConvertToString_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UFileIO::execConvertToString)
-{
-	P_GET_TARRAY(uint8,Z_Param_input);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(FString*)Z_Param__Result=UFileIO::ConvertToString(Z_Param_input);
-	P_NATIVE_END;
-}
-// End Class UFileIO Function ConvertToString
 
 // Begin Class UFileIO Function LoadTextArray
 struct Z_Construct_UFunction_UFileIO_LoadTextArray_Statics
@@ -143,7 +28,7 @@ struct Z_Construct_UFunction_UFileIO_LoadTextArray_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|FileI/O" },
+		{ "Category", "EstapeTools|FileI/O|String" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node is responsible for loading a text file. You can use it to load text or store string data, with each line representing a new array index.\n" },
 #endif
@@ -210,7 +95,7 @@ struct Z_Construct_UFunction_UFileIO_LoadTextFile_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|FileI/O" },
+		{ "Category", "EstapeTools|FileI/O|String" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node is responsible for loading a text file, allowing you to load text or store it.\n" },
 #endif
@@ -274,7 +159,7 @@ struct Z_Construct_UFunction_UFileIO_ReadBytesFile_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|FileI/O" },
+		{ "Category", "EstapeTools|FileI/O|Bytes" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node is responsible for reading any file as a sequence of bytes. It can be used to load game data, even if the files were not created by you, as long as you understand how to work with them. It serves as a 'Load Game' resource, allowing players to load their progress and continue from where they left off.\n" },
 #endif
@@ -330,6 +215,74 @@ DEFINE_FUNCTION(UFileIO::execReadBytesFile)
 }
 // End Class UFileIO Function ReadBytesFile
 
+// Begin Class UFileIO Function ReadCLUTData
+struct Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics
+{
+	struct FileIO_eventReadCLUTData_Parms
+	{
+		TArray<uint8> RawData;
+		int32 LenData;
+		TArray<FLinearColor> ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|FileI/O|CLUT" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Read data generated by the 'Write CLUT Data' node or similar back to a linear color format\n" },
+#endif
+		{ "Keywords", "CLUT color" },
+		{ "ModuleRelativePath", "Public/FileIO.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Read data generated by the 'Write CLUT Data' node or similar back to a linear color format" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RawData_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_RawData_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_RawData;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_LenData;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_RawData_Inner = { "RawData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_RawData = { "RawData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventReadCLUTData_Parms, RawData), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RawData_MetaData), NewProp_RawData_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_LenData = { "LenData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventReadCLUTData_Parms, LenData), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventReadCLUTData_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_RawData_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_RawData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_LenData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_ReturnValue_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFileIO, nullptr, "ReadCLUTData", nullptr, nullptr, Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::FileIO_eventReadCLUTData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04442401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::FileIO_eventReadCLUTData_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFileIO_ReadCLUTData()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFileIO_ReadCLUTData_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFileIO::execReadCLUTData)
+{
+	P_GET_TARRAY_REF(uint8,Z_Param_Out_RawData);
+	P_GET_PROPERTY(FIntProperty,Z_Param_LenData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<FLinearColor>*)Z_Param__Result=UFileIO::ReadCLUTData(Z_Param_Out_RawData,Z_Param_LenData);
+	P_NATIVE_END;
+}
+// End Class UFileIO Function ReadCLUTData
+
 // Begin Class UFileIO Function SaveTextArray
 struct Z_Construct_UFunction_UFileIO_SaveTextArray_Statics
 {
@@ -341,7 +294,7 @@ struct Z_Construct_UFunction_UFileIO_SaveTextArray_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|FileI/O" },
+		{ "Category", "EstapeTools|FileI/O|String" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node is responsible for creating a text file. With an array input, each index will correspond to a line in the text. It is an excellent choice for saving text or storing string data..\n" },
 #endif
@@ -408,7 +361,7 @@ struct Z_Construct_UFunction_UFileIO_SaveTextFile_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|FileI/O" },
+		{ "Category", "EstapeTools|FileI/O|String" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node is responsible for creating a text file, making it an excellent choice for saving text or storing string data.\n" },
 #endif
@@ -472,7 +425,7 @@ struct Z_Construct_UFunction_UFileIO_WriteBytesFile_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "EstapeTools|FileI/O" },
+		{ "Category", "EstapeTools|FileI/O|Bytes" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// This node is responsible for writing any file as a sequence of bytes. It can be used as a resource for saving game data, allowing players to save their progress and continue later.\n" },
 #endif
@@ -528,19 +481,87 @@ DEFINE_FUNCTION(UFileIO::execWriteBytesFile)
 }
 // End Class UFileIO Function WriteBytesFile
 
+// Begin Class UFileIO Function WriteCLUTData
+struct Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics
+{
+	struct FileIO_eventWriteCLUTData_Parms
+	{
+		TArray<FLinearColor> Colors;
+		int32 LenData;
+		TArray<uint8> ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|FileI/O|CLUT" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Compress Linear Color data into a 16-byte format. This node enables the creation of a custom CLUT (Color Lookup Table), a technique commonly used in 32-bit consoles. (Colors will be multiplied by 255 before convert). WARNING: Compress a higher image quality may result in a loss of color information (banding).\n" },
+#endif
+		{ "Keywords", "CLUT color" },
+		{ "ModuleRelativePath", "Public/FileIO.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Compress Linear Color data into a 16-byte format. This node enables the creation of a custom CLUT (Color Lookup Table), a technique commonly used in 32-bit consoles. (Colors will be multiplied by 255 before convert). WARNING: Compress a higher image quality may result in a loss of color information (banding)." },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Colors_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Colors_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_Colors;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_LenData;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_ReturnValue_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_Colors_Inner = { "Colors", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FLinearColor, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_Colors = { "Colors", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventWriteCLUTData_Parms, Colors), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Colors_MetaData), NewProp_Colors_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_LenData = { "LenData", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventWriteCLUTData_Parms, LenData), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_ReturnValue_Inner = { "ReturnValue", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FileIO_eventWriteCLUTData_Parms, ReturnValue), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_Colors_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_Colors,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_LenData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_ReturnValue_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UFileIO, nullptr, "WriteCLUTData", nullptr, nullptr, Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::FileIO_eventWriteCLUTData_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04442401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::FileIO_eventWriteCLUTData_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFileIO_WriteCLUTData()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFileIO_WriteCLUTData_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFileIO::execWriteCLUTData)
+{
+	P_GET_TARRAY_REF(FLinearColor,Z_Param_Out_Colors);
+	P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_LenData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<uint8>*)Z_Param__Result=UFileIO::WriteCLUTData(Z_Param_Out_Colors,Z_Param_Out_LenData);
+	P_NATIVE_END;
+}
+// End Class UFileIO Function WriteCLUTData
+
 // Begin Class UFileIO
 void UFileIO::StaticRegisterNativesUFileIO()
 {
 	UClass* Class = UFileIO::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ConvertToBytes", &UFileIO::execConvertToBytes },
-		{ "ConvertToString", &UFileIO::execConvertToString },
 		{ "LoadTextArray", &UFileIO::execLoadTextArray },
 		{ "LoadTextFile", &UFileIO::execLoadTextFile },
 		{ "ReadBytesFile", &UFileIO::execReadBytesFile },
+		{ "ReadCLUTData", &UFileIO::execReadCLUTData },
 		{ "SaveTextArray", &UFileIO::execSaveTextArray },
 		{ "SaveTextFile", &UFileIO::execSaveTextFile },
 		{ "WriteBytesFile", &UFileIO::execWriteBytesFile },
+		{ "WriteCLUTData", &UFileIO::execWriteCLUTData },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -559,14 +580,14 @@ struct Z_Construct_UClass_UFileIO_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UFileIO_ConvertToBytes, "ConvertToBytes" }, // 1187281997
-		{ &Z_Construct_UFunction_UFileIO_ConvertToString, "ConvertToString" }, // 2847042925
-		{ &Z_Construct_UFunction_UFileIO_LoadTextArray, "LoadTextArray" }, // 371024825
-		{ &Z_Construct_UFunction_UFileIO_LoadTextFile, "LoadTextFile" }, // 2462121004
-		{ &Z_Construct_UFunction_UFileIO_ReadBytesFile, "ReadBytesFile" }, // 3461536444
-		{ &Z_Construct_UFunction_UFileIO_SaveTextArray, "SaveTextArray" }, // 2890610372
-		{ &Z_Construct_UFunction_UFileIO_SaveTextFile, "SaveTextFile" }, // 2405996364
-		{ &Z_Construct_UFunction_UFileIO_WriteBytesFile, "WriteBytesFile" }, // 42103072
+		{ &Z_Construct_UFunction_UFileIO_LoadTextArray, "LoadTextArray" }, // 1087922934
+		{ &Z_Construct_UFunction_UFileIO_LoadTextFile, "LoadTextFile" }, // 1103683025
+		{ &Z_Construct_UFunction_UFileIO_ReadBytesFile, "ReadBytesFile" }, // 2362786272
+		{ &Z_Construct_UFunction_UFileIO_ReadCLUTData, "ReadCLUTData" }, // 212185547
+		{ &Z_Construct_UFunction_UFileIO_SaveTextArray, "SaveTextArray" }, // 1816396155
+		{ &Z_Construct_UFunction_UFileIO_SaveTextFile, "SaveTextFile" }, // 3969031409
+		{ &Z_Construct_UFunction_UFileIO_WriteBytesFile, "WriteBytesFile" }, // 1673330832
+		{ &Z_Construct_UFunction_UFileIO_WriteCLUTData, "WriteCLUTData" }, // 3156150884
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -615,10 +636,10 @@ UFileIO::~UFileIO() {}
 struct Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_FileIO_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFileIO, UFileIO::StaticClass, TEXT("UFileIO"), &Z_Registration_Info_UClass_UFileIO, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFileIO), 2312527701U) },
+		{ Z_Construct_UClass_UFileIO, UFileIO::StaticClass, TEXT("UFileIO"), &Z_Registration_Info_UClass_UFileIO, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFileIO), 155869784U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_FileIO_h_790227765(TEXT("/Script/EstapeTools"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_FileIO_h_1641136706(TEXT("/Script/EstapeTools"),
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_FileIO_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_FileIO_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
