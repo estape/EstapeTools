@@ -13,11 +13,13 @@ void EmptyLinkFunctionForGeneratedCodeEstapeToolsBPLibrary() {}
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FColor();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FLinearColor();
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 ESTAPETOOLS_API UClass* Z_Construct_UClass_UEstapeToolsBPLibrary();
 ESTAPETOOLS_API UClass* Z_Construct_UClass_UEstapeToolsBPLibrary_NoRegister();
 ESTAPETOOLS_API UEnum* Z_Construct_UEnum_EstapeTools_EDialogButtonClicked();
 ESTAPETOOLS_API UEnum* Z_Construct_UEnum_EstapeTools_EDialogButtons();
 ESTAPETOOLS_API UEnum* Z_Construct_UEnum_EstapeTools_EDialogIcon();
+ESTAPETOOLS_API UEnum* Z_Construct_UEnum_EstapeTools_ETextureFormat();
 UPackage* Z_Construct_UPackage__Script_EstapeTools();
 // End Cross Module References
 
@@ -228,6 +230,333 @@ UEnum* Z_Construct_UEnum_EstapeTools_EDialogButtonClicked()
 }
 // End Enum EDialogButtonClicked
 
+// Begin Enum ETextureFormat
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_ETextureFormat;
+static UEnum* ETextureFormat_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_ETextureFormat.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_ETextureFormat.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_EstapeTools_ETextureFormat, (UObject*)Z_Construct_UPackage__Script_EstapeTools(), TEXT("ETextureFormat"));
+	}
+	return Z_Registration_Info_UEnum_ETextureFormat.OuterSingleton;
+}
+template<> ESTAPETOOLS_API UEnum* StaticEnum<ETextureFormat>()
+{
+	return ETextureFormat_StaticEnum();
+}
+struct Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
+		{ "PF_A1.DisplayName", "A1" },
+		{ "PF_A1.Name", "ETextureFormat::PF_A1" },
+		{ "PF_A16B16G16R16.DisplayName", "A16B16G16R16" },
+		{ "PF_A16B16G16R16.Name", "ETextureFormat::PF_A16B16G16R16" },
+		{ "PF_A2B10G10R10.DisplayName", "A2B10G10R10" },
+		{ "PF_A2B10G10R10.Name", "ETextureFormat::PF_A2B10G10R10" },
+		{ "PF_A32B32G32R32F.DisplayName", "A32B32G32R32F" },
+		{ "PF_A32B32G32R32F.Name", "ETextureFormat::PF_A32B32G32R32F" },
+		{ "PF_A8.DisplayName", "A8" },
+		{ "PF_A8.Name", "ETextureFormat::PF_A8" },
+		{ "PF_A8R8G8B8.DisplayName", "A8R8G8B8" },
+		{ "PF_A8R8G8B8.Name", "ETextureFormat::PF_A8R8G8B8" },
+		{ "PF_ASTC_10x10.DisplayName", "ASTC_10x10" },
+		{ "PF_ASTC_10x10.Name", "ETextureFormat::PF_ASTC_10x10" },
+		{ "PF_ASTC_10x10_HDR.DisplayName", "ASTC_10x10_HDR" },
+		{ "PF_ASTC_10x10_HDR.Name", "ETextureFormat::PF_ASTC_10x10_HDR" },
+		{ "PF_ASTC_10x10_NORM_RG.DisplayName", "ASTC_10x10_NORM_RG" },
+		{ "PF_ASTC_10x10_NORM_RG.Name", "ETextureFormat::PF_ASTC_10x10_NORM_RG" },
+		{ "PF_ASTC_12x12.DisplayName", "ASTC_12x12" },
+		{ "PF_ASTC_12x12.Name", "ETextureFormat::PF_ASTC_12x12" },
+		{ "PF_ASTC_12x12_HDR.DisplayName", "ASTC_12x12_HDR" },
+		{ "PF_ASTC_12x12_HDR.Name", "ETextureFormat::PF_ASTC_12x12_HDR" },
+		{ "PF_ASTC_12x12_NORM_RG.DisplayName", "ASTC_12x12_NORM_RG" },
+		{ "PF_ASTC_12x12_NORM_RG.Name", "ETextureFormat::PF_ASTC_12x12_NORM_RG" },
+		{ "PF_ASTC_4x4.DisplayName", "ASTC_4x4" },
+		{ "PF_ASTC_4x4.Name", "ETextureFormat::PF_ASTC_4x4" },
+		{ "PF_ASTC_4x4_HDR.DisplayName", "ASTC_4x4_HDR" },
+		{ "PF_ASTC_4x4_HDR.Name", "ETextureFormat::PF_ASTC_4x4_HDR" },
+		{ "PF_ASTC_4x4_NORM_RG.DisplayName", "ASTC_4x4_NORM_RG" },
+		{ "PF_ASTC_4x4_NORM_RG.Name", "ETextureFormat::PF_ASTC_4x4_NORM_RG" },
+		{ "PF_ASTC_6x6.DisplayName", "ASTC_6x6" },
+		{ "PF_ASTC_6x6.Name", "ETextureFormat::PF_ASTC_6x6" },
+		{ "PF_ASTC_6x6_HDR.DisplayName", "ASTC_6x6_HDR" },
+		{ "PF_ASTC_6x6_HDR.Name", "ETextureFormat::PF_ASTC_6x6_HDR" },
+		{ "PF_ASTC_6x6_NORM_RG.DisplayName", "ASTC_6x6_NORM_RG" },
+		{ "PF_ASTC_6x6_NORM_RG.Name", "ETextureFormat::PF_ASTC_6x6_NORM_RG" },
+		{ "PF_ASTC_8x8.DisplayName", "ASTC_8x8" },
+		{ "PF_ASTC_8x8.Name", "ETextureFormat::PF_ASTC_8x8" },
+		{ "PF_ASTC_8x8_HDR.DisplayName", "ASTC_8x8_HDR" },
+		{ "PF_ASTC_8x8_HDR.Name", "ETextureFormat::PF_ASTC_8x8_HDR" },
+		{ "PF_ASTC_8x8_NORM_RG.DisplayName", "ASTC_8x8_NORM_RG" },
+		{ "PF_ASTC_8x8_NORM_RG.Name", "ETextureFormat::PF_ASTC_8x8_NORM_RG" },
+		{ "PF_ATC_RGB.DisplayName", "ATC_RGB" },
+		{ "PF_ATC_RGB.Name", "ETextureFormat::PF_ATC_RGB" },
+		{ "PF_ATC_RGBA_E.DisplayName", "ATC_RGBA_E" },
+		{ "PF_ATC_RGBA_E.Name", "ETextureFormat::PF_ATC_RGBA_E" },
+		{ "PF_ATC_RGBA_I.DisplayName", "ATC_RGBA_I" },
+		{ "PF_ATC_RGBA_I.Name", "ETextureFormat::PF_ATC_RGBA_I" },
+		{ "PF_B5G5R5A1_UNORM.DisplayName", "B5G5R5A1_UNORM" },
+		{ "PF_B5G5R5A1_UNORM.Name", "ETextureFormat::PF_B5G5R5A1_UNORM" },
+		{ "PF_B8G8R8A8.DisplayName", "B8G8R8A8" },
+		{ "PF_B8G8R8A8.Name", "ETextureFormat::PF_B8G8R8A8" },
+		{ "PF_BC4.DisplayName", "BC4" },
+		{ "PF_BC4.Name", "ETextureFormat::PF_BC4" },
+		{ "PF_BC5.DisplayName", "BC5" },
+		{ "PF_BC5.Name", "ETextureFormat::PF_BC5" },
+		{ "PF_BC6H.DisplayName", "BC6H" },
+		{ "PF_BC6H.Name", "ETextureFormat::PF_BC6H" },
+		{ "PF_BC7.DisplayName", "BC7" },
+		{ "PF_BC7.Name", "ETextureFormat::PF_BC7" },
+		{ "PF_D24.DisplayName", "D24" },
+		{ "PF_D24.Name", "ETextureFormat::PF_D24" },
+		{ "PF_DepthStencil.DisplayName", "DepthStencil" },
+		{ "PF_DepthStencil.Name", "ETextureFormat::PF_DepthStencil" },
+		{ "PF_DXT1.DisplayName", "DXT1" },
+		{ "PF_DXT1.Name", "ETextureFormat::PF_DXT1" },
+		{ "PF_DXT3.DisplayName", "DXT3" },
+		{ "PF_DXT3.Name", "ETextureFormat::PF_DXT3" },
+		{ "PF_DXT5.DisplayName", "DXT5" },
+		{ "PF_DXT5.Name", "ETextureFormat::PF_DXT5" },
+		{ "PF_ETC1.DisplayName", "ETC1" },
+		{ "PF_ETC1.Name", "ETextureFormat::PF_ETC1" },
+		{ "PF_ETC2_R11_EAC.DisplayName", "ETC2_R11_EAC" },
+		{ "PF_ETC2_R11_EAC.Name", "ETextureFormat::PF_ETC2_R11_EAC" },
+		{ "PF_ETC2_RG11_EAC.DisplayName", "ETC2_RG11_EAC" },
+		{ "PF_ETC2_RG11_EAC.Name", "ETextureFormat::PF_ETC2_RG11_EAC" },
+		{ "PF_ETC2_RGB.DisplayName", "ETC2_RGB" },
+		{ "PF_ETC2_RGB.Name", "ETextureFormat::PF_ETC2_RGB" },
+		{ "PF_ETC2_RGBA.DisplayName", "ETC2_RGBA" },
+		{ "PF_ETC2_RGBA.Name", "ETextureFormat::PF_ETC2_RGBA" },
+		{ "PF_FloatR11G11B10.DisplayName", "FloatR11G11B10" },
+		{ "PF_FloatR11G11B10.Name", "ETextureFormat::PF_FloatR11G11B10" },
+		{ "PF_FloatRGB.DisplayName", "FloatRGB" },
+		{ "PF_FloatRGB.Name", "ETextureFormat::PF_FloatRGB" },
+		{ "PF_FloatRGBA.DisplayName", "FloatRGBA" },
+		{ "PF_FloatRGBA.Name", "ETextureFormat::PF_FloatRGBA" },
+		{ "PF_G16.DisplayName", "G16" },
+		{ "PF_G16.Name", "ETextureFormat::PF_G16" },
+		{ "PF_G16R16.DisplayName", "G16R16" },
+		{ "PF_G16R16.Name", "ETextureFormat::PF_G16R16" },
+		{ "PF_G16R16_SNORM.DisplayName", "G16R16_SNORM" },
+		{ "PF_G16R16_SNORM.Name", "ETextureFormat::PF_G16R16_SNORM" },
+		{ "PF_G16R16F.DisplayName", "G16R16F" },
+		{ "PF_G16R16F.Name", "ETextureFormat::PF_G16R16F" },
+		{ "PF_G16R16F_FILTER.DisplayName", "G16R16F_FILTER" },
+		{ "PF_G16R16F_FILTER.Name", "ETextureFormat::PF_G16R16F_FILTER" },
+		{ "PF_G32R32F.DisplayName", "G32R32F" },
+		{ "PF_G32R32F.Name", "ETextureFormat::PF_G32R32F" },
+		{ "PF_G8.DisplayName", "G8" },
+		{ "PF_G8.Name", "ETextureFormat::PF_G8" },
+		{ "PF_L8.DisplayName", "L8" },
+		{ "PF_L8.Name", "ETextureFormat::PF_L8" },
+		{ "PF_MAX.DisplayName", "MAX" },
+		{ "PF_MAX.Name", "ETextureFormat::PF_MAX" },
+		{ "PF_NV12.DisplayName", "NV12" },
+		{ "PF_NV12.Name", "ETextureFormat::PF_NV12" },
+		{ "PF_P010.DisplayName", "P010" },
+		{ "PF_P010.Name", "ETextureFormat::PF_P010" },
+		{ "PF_PLATFORM_HDR_0.DisplayName", "PLATFORM_HDR_0" },
+		{ "PF_PLATFORM_HDR_0.Name", "ETextureFormat::PF_PLATFORM_HDR_0" },
+		{ "PF_PLATFORM_HDR_1.DisplayName", "PLATFORM_HDR_1" },
+		{ "PF_PLATFORM_HDR_1.Name", "ETextureFormat::PF_PLATFORM_HDR_1" },
+		{ "PF_PLATFORM_HDR_2.DisplayName", "PLATFORM_HDR_2" },
+		{ "PF_PLATFORM_HDR_2.Name", "ETextureFormat::PF_PLATFORM_HDR_2" },
+		{ "PF_PVRTC2.DisplayName", "PVRTC2" },
+		{ "PF_PVRTC2.Name", "ETextureFormat::PF_PVRTC2" },
+		{ "PF_PVRTC4.DisplayName", "PVRTC4" },
+		{ "PF_PVRTC4.Name", "ETextureFormat::PF_PVRTC4" },
+		{ "PF_R16_SINT.DisplayName", "R16_SINT" },
+		{ "PF_R16_SINT.Name", "ETextureFormat::PF_R16_SINT" },
+		{ "PF_R16_UINT.DisplayName", "R16_UINT" },
+		{ "PF_R16_UINT.Name", "ETextureFormat::PF_R16_UINT" },
+		{ "PF_R16F.DisplayName", "R16F" },
+		{ "PF_R16F.Name", "ETextureFormat::PF_R16F" },
+		{ "PF_R16F_FILTER.DisplayName", "R16F_FILTER" },
+		{ "PF_R16F_FILTER.Name", "ETextureFormat::PF_R16F_FILTER" },
+		{ "PF_R16G16_UINT.DisplayName", "R16G16_UINT" },
+		{ "PF_R16G16_UINT.Name", "ETextureFormat::PF_R16G16_UINT" },
+		{ "PF_R16G16B16A16_SINT.DisplayName", "R16G16B16A16_SINT" },
+		{ "PF_R16G16B16A16_SINT.Name", "ETextureFormat::PF_R16G16B16A16_SINT" },
+		{ "PF_R16G16B16A16_SNORM.DisplayName", "R16G16B16A16_SNORM" },
+		{ "PF_R16G16B16A16_SNORM.Name", "ETextureFormat::PF_R16G16B16A16_SNORM" },
+		{ "PF_R16G16B16A16_UINT.DisplayName", "R16G16B16A16_UINT" },
+		{ "PF_R16G16B16A16_UINT.Name", "ETextureFormat::PF_R16G16B16A16_UINT" },
+		{ "PF_R16G16B16A16_UNORM.DisplayName", "R16G16B16A16_UNORM" },
+		{ "PF_R16G16B16A16_UNORM.Name", "ETextureFormat::PF_R16G16B16A16_UNORM" },
+		{ "PF_R32_FLOAT.DisplayName", "R32_FLOAT" },
+		{ "PF_R32_FLOAT.Name", "ETextureFormat::PF_R32_FLOAT" },
+		{ "PF_R32_SINT.DisplayName", "R32_SINT" },
+		{ "PF_R32_SINT.Name", "ETextureFormat::PF_R32_SINT" },
+		{ "PF_R32_UINT.DisplayName", "R32_UINT" },
+		{ "PF_R32_UINT.Name", "ETextureFormat::PF_R32_UINT" },
+		{ "PF_R32G32_UINT.DisplayName", "R32G32_UINT" },
+		{ "PF_R32G32_UINT.Name", "ETextureFormat::PF_R32G32_UINT" },
+		{ "PF_R32G32B32_SINT.DisplayName", "R32G32B32_SINT" },
+		{ "PF_R32G32B32_SINT.Name", "ETextureFormat::PF_R32G32B32_SINT" },
+		{ "PF_R32G32B32_UINT.DisplayName", "R32G32B32_UINT" },
+		{ "PF_R32G32B32_UINT.Name", "ETextureFormat::PF_R32G32B32_UINT" },
+		{ "PF_R32G32B32A32_UINT.DisplayName", "R32G32B32A32_UINT" },
+		{ "PF_R32G32B32A32_UINT.Name", "ETextureFormat::PF_R32G32B32A32_UINT" },
+		{ "PF_R32G32B32F.DisplayName", "R32G32B32F" },
+		{ "PF_R32G32B32F.Name", "ETextureFormat::PF_R32G32B32F" },
+		{ "PF_R5G6B5_UNORM.DisplayName", "R5G6B5_UNORM" },
+		{ "PF_R5G6B5_UNORM.Name", "ETextureFormat::PF_R5G6B5_UNORM" },
+		{ "PF_R64_UINT.DisplayName", "R64_UINT" },
+		{ "PF_R64_UINT.Name", "ETextureFormat::PF_R64_UINT" },
+		{ "PF_R8.DisplayName", "R8" },
+		{ "PF_R8.Name", "ETextureFormat::PF_R8" },
+		{ "PF_R8_SINT.DisplayName", "R8_SINT" },
+		{ "PF_R8_SINT.Name", "ETextureFormat::PF_R8_SINT" },
+		{ "PF_R8_UINT.DisplayName", "R8_UINT" },
+		{ "PF_R8_UINT.Name", "ETextureFormat::PF_R8_UINT" },
+		{ "PF_R8G8.DisplayName", "R8G8" },
+		{ "PF_R8G8.Name", "ETextureFormat::PF_R8G8" },
+		{ "PF_R8G8_UINT.DisplayName", "R8G8_UINT" },
+		{ "PF_R8G8_UINT.Name", "ETextureFormat::PF_R8G8_UINT" },
+		{ "PF_R8G8B8A8.DisplayName", "R8G8B8A8" },
+		{ "PF_R8G8B8A8.Name", "ETextureFormat::PF_R8G8B8A8" },
+		{ "PF_R8G8B8A8_SNORM.DisplayName", "R8G8B8A8_SNORM" },
+		{ "PF_R8G8B8A8_SNORM.Name", "ETextureFormat::PF_R8G8B8A8_SNORM" },
+		{ "PF_R8G8B8A8_UINT.DisplayName", "R8G8B8A8_UINT" },
+		{ "PF_R8G8B8A8_UINT.Name", "ETextureFormat::PF_R8G8B8A8_UINT" },
+		{ "PF_R9G9B9EXP5.DisplayName", "R9G9B9EXP5" },
+		{ "PF_R9G9B9EXP5.Name", "ETextureFormat::PF_R9G9B9EXP5" },
+		{ "PF_ShadowDepth.DisplayName", "ShadowDepth" },
+		{ "PF_ShadowDepth.Name", "ETextureFormat::PF_ShadowDepth" },
+		{ "PF_Unknown.DisplayName", "Unknown" },
+		{ "PF_Unknown.Name", "ETextureFormat::PF_Unknown" },
+		{ "PF_UYVY.DisplayName", "UYVY" },
+		{ "PF_UYVY.Name", "ETextureFormat::PF_UYVY" },
+		{ "PF_V8U8.DisplayName", "V8U8" },
+		{ "PF_V8U8.Name", "ETextureFormat::PF_V8U8" },
+		{ "PF_X24_G8.DisplayName", "X24_G8" },
+		{ "PF_X24_G8.Name", "ETextureFormat::PF_X24_G8" },
+		{ "PF_XGXR8.DisplayName", "XGXR8" },
+		{ "PF_XGXR8.Name", "ETextureFormat::PF_XGXR8" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "ETextureFormat::PF_Unknown", (int64)ETextureFormat::PF_Unknown },
+		{ "ETextureFormat::PF_A32B32G32R32F", (int64)ETextureFormat::PF_A32B32G32R32F },
+		{ "ETextureFormat::PF_B8G8R8A8", (int64)ETextureFormat::PF_B8G8R8A8 },
+		{ "ETextureFormat::PF_G8", (int64)ETextureFormat::PF_G8 },
+		{ "ETextureFormat::PF_G16", (int64)ETextureFormat::PF_G16 },
+		{ "ETextureFormat::PF_DXT1", (int64)ETextureFormat::PF_DXT1 },
+		{ "ETextureFormat::PF_DXT3", (int64)ETextureFormat::PF_DXT3 },
+		{ "ETextureFormat::PF_DXT5", (int64)ETextureFormat::PF_DXT5 },
+		{ "ETextureFormat::PF_UYVY", (int64)ETextureFormat::PF_UYVY },
+		{ "ETextureFormat::PF_FloatRGB", (int64)ETextureFormat::PF_FloatRGB },
+		{ "ETextureFormat::PF_FloatRGBA", (int64)ETextureFormat::PF_FloatRGBA },
+		{ "ETextureFormat::PF_DepthStencil", (int64)ETextureFormat::PF_DepthStencil },
+		{ "ETextureFormat::PF_ShadowDepth", (int64)ETextureFormat::PF_ShadowDepth },
+		{ "ETextureFormat::PF_R32_FLOAT", (int64)ETextureFormat::PF_R32_FLOAT },
+		{ "ETextureFormat::PF_G16R16", (int64)ETextureFormat::PF_G16R16 },
+		{ "ETextureFormat::PF_G16R16F", (int64)ETextureFormat::PF_G16R16F },
+		{ "ETextureFormat::PF_G16R16F_FILTER", (int64)ETextureFormat::PF_G16R16F_FILTER },
+		{ "ETextureFormat::PF_G32R32F", (int64)ETextureFormat::PF_G32R32F },
+		{ "ETextureFormat::PF_A2B10G10R10", (int64)ETextureFormat::PF_A2B10G10R10 },
+		{ "ETextureFormat::PF_A16B16G16R16", (int64)ETextureFormat::PF_A16B16G16R16 },
+		{ "ETextureFormat::PF_D24", (int64)ETextureFormat::PF_D24 },
+		{ "ETextureFormat::PF_R16F", (int64)ETextureFormat::PF_R16F },
+		{ "ETextureFormat::PF_R16F_FILTER", (int64)ETextureFormat::PF_R16F_FILTER },
+		{ "ETextureFormat::PF_BC5", (int64)ETextureFormat::PF_BC5 },
+		{ "ETextureFormat::PF_V8U8", (int64)ETextureFormat::PF_V8U8 },
+		{ "ETextureFormat::PF_A1", (int64)ETextureFormat::PF_A1 },
+		{ "ETextureFormat::PF_FloatR11G11B10", (int64)ETextureFormat::PF_FloatR11G11B10 },
+		{ "ETextureFormat::PF_A8", (int64)ETextureFormat::PF_A8 },
+		{ "ETextureFormat::PF_R32_UINT", (int64)ETextureFormat::PF_R32_UINT },
+		{ "ETextureFormat::PF_R32_SINT", (int64)ETextureFormat::PF_R32_SINT },
+		{ "ETextureFormat::PF_PVRTC2", (int64)ETextureFormat::PF_PVRTC2 },
+		{ "ETextureFormat::PF_PVRTC4", (int64)ETextureFormat::PF_PVRTC4 },
+		{ "ETextureFormat::PF_R16_UINT", (int64)ETextureFormat::PF_R16_UINT },
+		{ "ETextureFormat::PF_R16_SINT", (int64)ETextureFormat::PF_R16_SINT },
+		{ "ETextureFormat::PF_R16G16B16A16_UINT", (int64)ETextureFormat::PF_R16G16B16A16_UINT },
+		{ "ETextureFormat::PF_R16G16B16A16_SINT", (int64)ETextureFormat::PF_R16G16B16A16_SINT },
+		{ "ETextureFormat::PF_R5G6B5_UNORM", (int64)ETextureFormat::PF_R5G6B5_UNORM },
+		{ "ETextureFormat::PF_R8G8B8A8", (int64)ETextureFormat::PF_R8G8B8A8 },
+		{ "ETextureFormat::PF_A8R8G8B8", (int64)ETextureFormat::PF_A8R8G8B8 },
+		{ "ETextureFormat::PF_BC4", (int64)ETextureFormat::PF_BC4 },
+		{ "ETextureFormat::PF_R8G8", (int64)ETextureFormat::PF_R8G8 },
+		{ "ETextureFormat::PF_ATC_RGB", (int64)ETextureFormat::PF_ATC_RGB },
+		{ "ETextureFormat::PF_ATC_RGBA_E", (int64)ETextureFormat::PF_ATC_RGBA_E },
+		{ "ETextureFormat::PF_ATC_RGBA_I", (int64)ETextureFormat::PF_ATC_RGBA_I },
+		{ "ETextureFormat::PF_X24_G8", (int64)ETextureFormat::PF_X24_G8 },
+		{ "ETextureFormat::PF_ETC1", (int64)ETextureFormat::PF_ETC1 },
+		{ "ETextureFormat::PF_ETC2_RGB", (int64)ETextureFormat::PF_ETC2_RGB },
+		{ "ETextureFormat::PF_ETC2_RGBA", (int64)ETextureFormat::PF_ETC2_RGBA },
+		{ "ETextureFormat::PF_R32G32B32A32_UINT", (int64)ETextureFormat::PF_R32G32B32A32_UINT },
+		{ "ETextureFormat::PF_R16G16_UINT", (int64)ETextureFormat::PF_R16G16_UINT },
+		{ "ETextureFormat::PF_ASTC_4x4", (int64)ETextureFormat::PF_ASTC_4x4 },
+		{ "ETextureFormat::PF_ASTC_6x6", (int64)ETextureFormat::PF_ASTC_6x6 },
+		{ "ETextureFormat::PF_ASTC_8x8", (int64)ETextureFormat::PF_ASTC_8x8 },
+		{ "ETextureFormat::PF_ASTC_10x10", (int64)ETextureFormat::PF_ASTC_10x10 },
+		{ "ETextureFormat::PF_ASTC_12x12", (int64)ETextureFormat::PF_ASTC_12x12 },
+		{ "ETextureFormat::PF_BC6H", (int64)ETextureFormat::PF_BC6H },
+		{ "ETextureFormat::PF_BC7", (int64)ETextureFormat::PF_BC7 },
+		{ "ETextureFormat::PF_R8_UINT", (int64)ETextureFormat::PF_R8_UINT },
+		{ "ETextureFormat::PF_L8", (int64)ETextureFormat::PF_L8 },
+		{ "ETextureFormat::PF_XGXR8", (int64)ETextureFormat::PF_XGXR8 },
+		{ "ETextureFormat::PF_R8G8B8A8_UINT", (int64)ETextureFormat::PF_R8G8B8A8_UINT },
+		{ "ETextureFormat::PF_R8G8B8A8_SNORM", (int64)ETextureFormat::PF_R8G8B8A8_SNORM },
+		{ "ETextureFormat::PF_R16G16B16A16_UNORM", (int64)ETextureFormat::PF_R16G16B16A16_UNORM },
+		{ "ETextureFormat::PF_R16G16B16A16_SNORM", (int64)ETextureFormat::PF_R16G16B16A16_SNORM },
+		{ "ETextureFormat::PF_PLATFORM_HDR_0", (int64)ETextureFormat::PF_PLATFORM_HDR_0 },
+		{ "ETextureFormat::PF_PLATFORM_HDR_1", (int64)ETextureFormat::PF_PLATFORM_HDR_1 },
+		{ "ETextureFormat::PF_PLATFORM_HDR_2", (int64)ETextureFormat::PF_PLATFORM_HDR_2 },
+		{ "ETextureFormat::PF_NV12", (int64)ETextureFormat::PF_NV12 },
+		{ "ETextureFormat::PF_R32G32_UINT", (int64)ETextureFormat::PF_R32G32_UINT },
+		{ "ETextureFormat::PF_ETC2_R11_EAC", (int64)ETextureFormat::PF_ETC2_R11_EAC },
+		{ "ETextureFormat::PF_ETC2_RG11_EAC", (int64)ETextureFormat::PF_ETC2_RG11_EAC },
+		{ "ETextureFormat::PF_R8", (int64)ETextureFormat::PF_R8 },
+		{ "ETextureFormat::PF_B5G5R5A1_UNORM", (int64)ETextureFormat::PF_B5G5R5A1_UNORM },
+		{ "ETextureFormat::PF_ASTC_4x4_HDR", (int64)ETextureFormat::PF_ASTC_4x4_HDR },
+		{ "ETextureFormat::PF_ASTC_6x6_HDR", (int64)ETextureFormat::PF_ASTC_6x6_HDR },
+		{ "ETextureFormat::PF_ASTC_8x8_HDR", (int64)ETextureFormat::PF_ASTC_8x8_HDR },
+		{ "ETextureFormat::PF_ASTC_10x10_HDR", (int64)ETextureFormat::PF_ASTC_10x10_HDR },
+		{ "ETextureFormat::PF_ASTC_12x12_HDR", (int64)ETextureFormat::PF_ASTC_12x12_HDR },
+		{ "ETextureFormat::PF_G16R16_SNORM", (int64)ETextureFormat::PF_G16R16_SNORM },
+		{ "ETextureFormat::PF_R8G8_UINT", (int64)ETextureFormat::PF_R8G8_UINT },
+		{ "ETextureFormat::PF_R32G32B32_UINT", (int64)ETextureFormat::PF_R32G32B32_UINT },
+		{ "ETextureFormat::PF_R32G32B32_SINT", (int64)ETextureFormat::PF_R32G32B32_SINT },
+		{ "ETextureFormat::PF_R32G32B32F", (int64)ETextureFormat::PF_R32G32B32F },
+		{ "ETextureFormat::PF_R8_SINT", (int64)ETextureFormat::PF_R8_SINT },
+		{ "ETextureFormat::PF_R64_UINT", (int64)ETextureFormat::PF_R64_UINT },
+		{ "ETextureFormat::PF_R9G9B9EXP5", (int64)ETextureFormat::PF_R9G9B9EXP5 },
+		{ "ETextureFormat::PF_P010", (int64)ETextureFormat::PF_P010 },
+		{ "ETextureFormat::PF_ASTC_4x4_NORM_RG", (int64)ETextureFormat::PF_ASTC_4x4_NORM_RG },
+		{ "ETextureFormat::PF_ASTC_6x6_NORM_RG", (int64)ETextureFormat::PF_ASTC_6x6_NORM_RG },
+		{ "ETextureFormat::PF_ASTC_8x8_NORM_RG", (int64)ETextureFormat::PF_ASTC_8x8_NORM_RG },
+		{ "ETextureFormat::PF_ASTC_10x10_NORM_RG", (int64)ETextureFormat::PF_ASTC_10x10_NORM_RG },
+		{ "ETextureFormat::PF_ASTC_12x12_NORM_RG", (int64)ETextureFormat::PF_ASTC_12x12_NORM_RG },
+		{ "ETextureFormat::PF_MAX", (int64)ETextureFormat::PF_MAX },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_EstapeTools,
+	nullptr,
+	"ETextureFormat",
+	"ETextureFormat",
+	Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics::Enum_MetaDataParams), Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_EstapeTools_ETextureFormat()
+{
+	if (!Z_Registration_Info_UEnum_ETextureFormat.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_ETextureFormat.InnerSingleton, Z_Construct_UEnum_EstapeTools_ETextureFormat_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_ETextureFormat.InnerSingleton;
+}
+// End Enum ETextureFormat
+
 // Begin Class UEstapeToolsBPLibrary Function ArrayColorToArrayLinearColor
 struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayColorToArrayLinearColor_Statics
 {
@@ -419,6 +748,94 @@ DEFINE_FUNCTION(UEstapeToolsBPLibrary::execBytesToColors)
 	P_NATIVE_END;
 }
 // End Class UEstapeToolsBPLibrary Function BytesToColors
+
+// Begin Class UEstapeToolsBPLibrary Function BytesToTexture2D
+struct Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics
+{
+	struct EstapeToolsBPLibrary_eventBytesToTexture2D_Parms
+	{
+		TArray<uint8> BytesArray;
+		UTexture2D* TextureLoaded;
+		int32 Width;
+		int32 Height;
+		ETextureFormat TextureFormat;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|Utilities" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Convert Bytes to Texture2D.\n" },
+#endif
+		{ "Keywords", "Convert Bytes Texture2D" },
+		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Convert Bytes to Texture2D." },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BytesArray_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_BytesArray_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_BytesArray;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TextureLoaded;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Width;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Height;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_TextureFormat_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_TextureFormat;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_BytesArray_Inner = { "BytesArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_BytesArray = { "BytesArray", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventBytesToTexture2D_Parms, BytesArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BytesArray_MetaData), NewProp_BytesArray_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_TextureLoaded = { "TextureLoaded", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventBytesToTexture2D_Parms, TextureLoaded), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_Width = { "Width", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventBytesToTexture2D_Parms, Width), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_Height = { "Height", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventBytesToTexture2D_Parms, Height), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_TextureFormat_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_TextureFormat = { "TextureFormat", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventBytesToTexture2D_Parms, TextureFormat), Z_Construct_UEnum_EstapeTools_ETextureFormat, METADATA_PARAMS(0, nullptr) }; // 667074390
+void Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((EstapeToolsBPLibrary_eventBytesToTexture2D_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(EstapeToolsBPLibrary_eventBytesToTexture2D_Parms), &Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_BytesArray_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_BytesArray,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_TextureLoaded,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_Width,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_Height,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_TextureFormat_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_TextureFormat,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "BytesToTexture2D", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::EstapeToolsBPLibrary_eventBytesToTexture2D_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::EstapeToolsBPLibrary_eventBytesToTexture2D_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEstapeToolsBPLibrary::execBytesToTexture2D)
+{
+	P_GET_TARRAY_REF(uint8,Z_Param_Out_BytesArray);
+	P_GET_OBJECT_REF(UTexture2D,Z_Param_Out_TextureLoaded);
+	P_GET_PROPERTY(FIntProperty,Z_Param_Width);
+	P_GET_PROPERTY(FIntProperty,Z_Param_Height);
+	P_GET_ENUM(ETextureFormat,Z_Param_TextureFormat);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UEstapeToolsBPLibrary::BytesToTexture2D(Z_Param_Out_BytesArray,P_ARG_GC_BARRIER(Z_Param_Out_TextureLoaded),Z_Param_Width,Z_Param_Height,ETextureFormat(Z_Param_TextureFormat));
+	P_NATIVE_END;
+}
+// End Class UEstapeToolsBPLibrary Function BytesToTexture2D
 
 // Begin Class UEstapeToolsBPLibrary Function ColorsToBytes
 struct Z_Construct_UFunction_UEstapeToolsBPLibrary_ColorsToBytes_Statics
@@ -763,6 +1180,91 @@ DEFINE_FUNCTION(UEstapeToolsBPLibrary::execHexadecimalToDecimal)
 }
 // End Class UEstapeToolsBPLibrary Function HexadecimalToDecimal
 
+// Begin Class UEstapeToolsBPLibrary Function Texture2DToBytes
+struct Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics
+{
+	struct EstapeToolsBPLibrary_eventTexture2DToBytes_Parms
+	{
+		UTexture2D* Texture;
+		TArray<uint8> TextureData;
+		int32 Width;
+		int32 Height;
+		ETextureFormat TextureFormat;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "EstapeTools|Utilities" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Convert Texture2D to Bytes.\n" },
+#endif
+		{ "Keywords", "Convert Bytes Texture2D" },
+		{ "ModuleRelativePath", "Public/EstapeToolsBPLibrary.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Convert Texture2D to Bytes." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Texture;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_TextureData_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_TextureData;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Width;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Height;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_TextureFormat_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_TextureFormat;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_Texture = { "Texture", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventTexture2DToBytes_Parms, Texture), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureData_Inner = { "TextureData", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureData = { "TextureData", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventTexture2DToBytes_Parms, TextureData), EArrayPropertyFlags::None, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_Width = { "Width", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventTexture2DToBytes_Parms, Width), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_Height = { "Height", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventTexture2DToBytes_Parms, Height), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureFormat_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureFormat = { "TextureFormat", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EstapeToolsBPLibrary_eventTexture2DToBytes_Parms, TextureFormat), Z_Construct_UEnum_EstapeTools_ETextureFormat, METADATA_PARAMS(0, nullptr) }; // 667074390
+void Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((EstapeToolsBPLibrary_eventTexture2DToBytes_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(EstapeToolsBPLibrary_eventTexture2DToBytes_Parms), &Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_Texture,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureData_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_Width,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_Height,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureFormat_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_TextureFormat,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEstapeToolsBPLibrary, nullptr, "Texture2DToBytes", nullptr, nullptr, Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::EstapeToolsBPLibrary_eventTexture2DToBytes_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::EstapeToolsBPLibrary_eventTexture2DToBytes_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEstapeToolsBPLibrary::execTexture2DToBytes)
+{
+	P_GET_OBJECT(UTexture2D,Z_Param_Texture);
+	P_GET_TARRAY_REF(uint8,Z_Param_Out_TextureData);
+	P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_Width);
+	P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_Height);
+	P_GET_ENUM_REF(ETextureFormat,Z_Param_Out_TextureFormat);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UEstapeToolsBPLibrary::Texture2DToBytes(Z_Param_Texture,Z_Param_Out_TextureData,Z_Param_Out_Width,Z_Param_Out_Height,(ETextureFormat&)(Z_Param_Out_TextureFormat));
+	P_NATIVE_END;
+}
+// End Class UEstapeToolsBPLibrary Function Texture2DToBytes
+
 // Begin Class UEstapeToolsBPLibrary
 void UEstapeToolsBPLibrary::StaticRegisterNativesUEstapeToolsBPLibrary()
 {
@@ -771,12 +1273,14 @@ void UEstapeToolsBPLibrary::StaticRegisterNativesUEstapeToolsBPLibrary()
 		{ "ArrayColorToArrayLinearColor", &UEstapeToolsBPLibrary::execArrayColorToArrayLinearColor },
 		{ "ArrayLinearColorToArrayColor", &UEstapeToolsBPLibrary::execArrayLinearColorToArrayColor },
 		{ "BytesToColors", &UEstapeToolsBPLibrary::execBytesToColors },
+		{ "BytesToTexture2D", &UEstapeToolsBPLibrary::execBytesToTexture2D },
 		{ "ColorsToBytes", &UEstapeToolsBPLibrary::execColorsToBytes },
 		{ "ConvertBytesToString", &UEstapeToolsBPLibrary::execConvertBytesToString },
 		{ "ConvertStringToBytes", &UEstapeToolsBPLibrary::execConvertStringToBytes },
 		{ "DecimalToHexadecimal", &UEstapeToolsBPLibrary::execDecimalToHexadecimal },
 		{ "GetNewLine", &UEstapeToolsBPLibrary::execGetNewLine },
 		{ "HexadecimalToDecimal", &UEstapeToolsBPLibrary::execHexadecimalToDecimal },
+		{ "Texture2DToBytes", &UEstapeToolsBPLibrary::execTexture2DToBytes },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -798,12 +1302,14 @@ struct Z_Construct_UClass_UEstapeToolsBPLibrary_Statics
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayColorToArrayLinearColor, "ArrayColorToArrayLinearColor" }, // 2877409321
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ArrayLinearColorToArrayColor, "ArrayLinearColorToArrayColor" }, // 3944431486
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToColors, "BytesToColors" }, // 3499322742
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_BytesToTexture2D, "BytesToTexture2D" }, // 259184652
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ColorsToBytes, "ColorsToBytes" }, // 2840225786
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertBytesToString, "ConvertBytesToString" }, // 2557724210
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_ConvertStringToBytes, "ConvertStringToBytes" }, // 2126026406
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_DecimalToHexadecimal, "DecimalToHexadecimal" }, // 2307546783
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_GetNewLine, "GetNewLine" }, // 3727302882
 		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_HexadecimalToDecimal, "HexadecimalToDecimal" }, // 3904367630
+		{ &Z_Construct_UFunction_UEstapeToolsBPLibrary_Texture2DToBytes, "Texture2DToBytes" }, // 1789346310
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -854,12 +1360,13 @@ struct Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_E
 		{ EDialogButtons_StaticEnum, TEXT("EDialogButtons"), &Z_Registration_Info_UEnum_EDialogButtons, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3680733245U) },
 		{ EDialogIcon_StaticEnum, TEXT("EDialogIcon"), &Z_Registration_Info_UEnum_EDialogIcon, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 593296904U) },
 		{ EDialogButtonClicked_StaticEnum, TEXT("EDialogButtonClicked"), &Z_Registration_Info_UEnum_EDialogButtonClicked, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1096604047U) },
+		{ ETextureFormat_StaticEnum, TEXT("ETextureFormat"), &Z_Registration_Info_UEnum_ETextureFormat, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 667074390U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEstapeToolsBPLibrary, UEstapeToolsBPLibrary::StaticClass, TEXT("UEstapeToolsBPLibrary"), &Z_Registration_Info_UClass_UEstapeToolsBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEstapeToolsBPLibrary), 2413919463U) },
+		{ Z_Construct_UClass_UEstapeToolsBPLibrary, UEstapeToolsBPLibrary::StaticClass, TEXT("UEstapeToolsBPLibrary"), &Z_Registration_Info_UClass_UEstapeToolsBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEstapeToolsBPLibrary), 658211546U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_3908726401(TEXT("/Script/EstapeTools"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_4166707137(TEXT("/Script/EstapeTools"),
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_EstapeToolsProject_Plugins_EstapeTools_Source_EstapeTools_Public_EstapeToolsBPLibrary_h_Statics::EnumInfo));
