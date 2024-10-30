@@ -6,7 +6,7 @@
 #include "Misc/FileHelper.h"
 
 UEstapeToolsBPLibrary::UEstapeToolsBPLibrary(const FObjectInitializer& ObjectInitializer)
-: Super(ObjectInitializer)
+    : Super(ObjectInitializer)
 {
 
 }

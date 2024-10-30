@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"Version": 1,
+	"Version": 2,
 	"VersionName": "1.0.5",
 	"FriendlyName": "EstapeTools",
 	"Description": "A pack with essential nodes to improve your workflow and development.",
@@ -10,10 +10,8 @@
 	"DocsURL": "https://estapetools.xyz/docs",
 	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e1a5a090592c454c816b40452e8cc8de",
 	"SupportURL": "https://estapetools.xyz/",
-	"EngineVersion": "5.4.0",
+	"EngineVersion": "5.3.0",
 	"CanContainContent": false,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
@@ -25,5 +23,7 @@
 				"Linux"
 			]
 		}
-	]
+	],
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false
 }

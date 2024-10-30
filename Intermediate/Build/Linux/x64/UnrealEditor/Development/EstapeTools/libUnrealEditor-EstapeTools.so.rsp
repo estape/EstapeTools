@@ -1,9 +1,0 @@
-"/media/estape/Arquivos/Usuarios/Rodrigo/Documentos/GameDev/UnrealEngine/v5.4/EstapeToolsProject/Plugins/EstapeTools/Intermediate/Build/Linux/x64/UnrealEditor/Development/EstapeTools/Module.EstapeTools.cpp.o"
-"/media/estape/Arquivos/Usuarios/Rodrigo/Documentos/GameDev/UnrealEngine/v5.4/EstapeToolsProject/Plugins/EstapeTools/Intermediate/Build/Linux/x64/UnrealEditor/Development/EstapeTools/EstapeTools.cpp.o"
-"/media/estape/Arquivos/Usuarios/Rodrigo/Documentos/GameDev/UnrealEngine/v5.4/EstapeToolsProject/Plugins/EstapeTools/Intermediate/Build/Linux/x64/UnrealEditor/Development/EstapeTools/EstapeToolsBPLibrary.cpp.o"
-"/media/estape/Arquivos/Usuarios/Rodrigo/Documentos/GameDev/UnrealEngine/v5.4/EstapeToolsProject/Plugins/EstapeTools/Intermediate/Build/Linux/x64/UnrealEditor/Development/EstapeTools/FileIO.cpp.o"
- -soname="libUnrealEditor-EstapeTools.so"
- -rpath-link="/media/estape/Arquivos/Usuarios/Rodrigo/Documentos/GameDev/UnrealEngine/v5.4/EstapeToolsProject/Plugins/EstapeTools/Binaries/Linux"
- -L"/media/estape/Programas/Program Files/Epic Games/Linux/UE_5.4/Engine/Binaries/Linux"
- --start-group
- --end-group

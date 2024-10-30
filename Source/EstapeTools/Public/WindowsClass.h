@@ -9,8 +9,8 @@
 UCLASS()
 class ESTAPETOOLS_API UWindowsClass : public UBlueprintFunctionLibrary
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
     // Obtain the laptop battery percentage as a floating-point value. This feature is available only on Windows 10 or later.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|Windows|Battery", meta = (Keywords = "Get Battery Windows"))
     static float GetBatteryLevel();
@@ -26,6 +26,6 @@ class ESTAPETOOLS_API UWindowsClass : public UBlueprintFunctionLibrary
     UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Windows")
     static EDialogButtonClicked MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage, EDialogButtons Buttons, EDialogIcon Icon);
 
-    private:
+private:
     static int MSGInner(const void* ParentWindowHandle, const FString& DialogTitle, const FString& DialogMessage, const unsigned int DialogType);
 };

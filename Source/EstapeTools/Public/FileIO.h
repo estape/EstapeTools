@@ -9,8 +9,8 @@
 UCLASS()
 class ESTAPETOOLS_API UFileIO : public UBlueprintFunctionLibrary
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
+
     // This node is responsible for loading a text file, allowing you to load text or store it.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|FileI/O|String", meta = (Keywords = "Load Text File"))
     static bool LoadTextFile(FString FileName, FString& StringContent);

@@ -6,13 +6,13 @@
 #include "ProjectSettings.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class ESTAPETOOLS_API UProjectSettings : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
-	
+
 	// Return Description string from Project Description.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Project|Settings", meta = (Keywords = "Project Description Configuration"))
 	static FString GetProjectDescription();
@@ -79,7 +79,7 @@ class ESTAPETOOLS_API UProjectSettings : public UBlueprintFunctionLibrary
 	// Return Allow Window Resize bool from Project Description.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Project|Settings", meta = (Keywords = "Project Allow Window Resize Description Configuration"))
 	static bool GetAllowWindowResize();
-	
+
 	// Return Allow Close bool from Project Description.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Project|Settings", meta = (Keywords = "Project Allow Close Description Configuration"))
 	static bool GetAllowClose();

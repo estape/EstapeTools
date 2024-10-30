@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// Some copyright should be here...
 
 using UnrealBuildTool;
 
@@ -20,18 +20,18 @@ public class EstapeTools : ModuleRules
 				// ... add other private include paths required here ...
 			}
 			);
-
-
-        PublicDependencyModuleNames.AddRange(
-            new string[]
-            {
-                "Core",
+			
+		
+		PublicDependencyModuleNames.AddRange(
+			new string[]
+			{
+				"Core",
                 "EngineSettings",
             }
-        );
-
-
-        PrivateDependencyModuleNames.AddRange(
+			);
+			
+		
+		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
 				"CoreUObject",
