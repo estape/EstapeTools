@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "WindowsClass.h"

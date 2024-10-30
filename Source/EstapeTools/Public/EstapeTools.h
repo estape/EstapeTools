@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
 

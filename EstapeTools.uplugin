@@ -23,7 +23,5 @@
 				"Linux"
 			]
 		}
-	],
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false
+	]
 }
