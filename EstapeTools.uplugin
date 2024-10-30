@@ -12,8 +12,6 @@
 	"SupportURL": "https://estapetools.xyz/",
 	"EngineVersion": "5.4.0",
 	"CanContainContent": false,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
