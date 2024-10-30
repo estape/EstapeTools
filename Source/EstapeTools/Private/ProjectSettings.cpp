@@ -1,5 +1,6 @@
 // Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
+
 #include "ProjectSettings.h"
 #include "Misc/Guid.h"
 #include "GeneralProjectSettings.h"
@@ -140,11 +141,11 @@ void UProjectSettings::SetProjectID(const FGuid& ProjectID, bool& IsValid)
     {
         ProjectSettings->ProjectID = Guid;
         ProjectSettings->SaveConfig();
-		IsValid = true;
+        IsValid = true;
     }
     else
     {
-		IsValid = false;
+        IsValid = false;
         UE_LOG(LogTemp, Warning, TEXT("SetProjectID: Invalid GUID format."));
     }
 }
@@ -277,5 +278,5 @@ void UProjectSettings::SetAllowMinimize(bool AllowMinimize)
 
 FString UProjectSettings::GetEngineVersion()
 {
-	return FEngineVersion::Current().ToString();
+    return FEngineVersion::Current().ToString();
 }

@@ -3,7 +3,6 @@
 
 #include "FileIO.h"
 #include "Misc/FileHelper.h"
-#include "EstapeToolsBPLibrary.h"
 
 bool UFileIO::LoadTextFile(FString FileName, FString& StringContent)
 {
@@ -35,27 +34,27 @@ bool UFileIO::ReadBytesFile(FString FileName, TArray<uint8>& Data)
     return FFileHelper::LoadFileToArray(Data, *FileName);
 }
 
-TArray<uint8> UFileIO::WriteCLUTData(const TArray<FLinearColor>& Colors, int32& LenData)
-{
-    int32 MaxColorCount = Colors.Num();
-    TArray<uint8> RawData;
-    RawData.SetNum(MaxColorCount * 2);
-    int32 ColorIndex = 0;
-
-    for (int32 i = 0; i < MaxColorCount; i++)
-    {
-        uint8 R = (uint8)(FMath::Clamp(Colors[i].R * 255.0f, 0, 255) / 8);
-        uint8 G = (uint8)(FMath::Clamp(Colors[i].G * 255.0f, 0, 255) / 8);
-        uint8 B = (uint8)(FMath::Clamp(Colors[i].B * 255.0f, 0, 255) / 8);
-
-        uint16 ColorData = (B << 10) | (G << 5) | R;
-        RawData[ColorIndex++] = ColorData & 0xFF;
-        RawData[ColorIndex++] = (ColorData >> 8) & 0xFF;
-    }
-
-    LenData = MaxColorCount;
-    return RawData;
-}
+//TArray<uint8> UFileIO::WriteCLUTData(const TArray<FLinearColor>& Colors, int32& LenData)
+//{
+//    int32 MaxColorCount = Colors.Num();
+//    TArray<uint8> RawData;
+//    RawData.SetNum(MaxColorCount * 2);
+//    int32 ColorIndex = 0;
+//
+//    for (int32 i = 0; i < MaxColorCount; i++)
+//    {
+//        uint8 R = (uint8)(FMath::Clamp(Colors[i].R * 255.0f, 0, 255) / 8);
+//        uint8 G = (uint8)(FMath::Clamp(Colors[i].G * 255.0f, 0, 255) / 8);
+//        uint8 B = (uint8)(FMath::Clamp(Colors[i].B * 255.0f, 0, 255) / 8);
+//
+//        uint16 ColorData = (B << 10) | (G << 5) | R;
+//        RawData[ColorIndex++] = ColorData & 0xFF;
+//        RawData[ColorIndex++] = (ColorData >> 8) & 0xFF;
+//    }
+//
+//    LenData = MaxColorCount;
+//    return RawData;
+//}
 
 TArray<FLinearColor> UFileIO::ReadCLUTData(const TArray<uint8>& RawData, int32 LenData)
 {

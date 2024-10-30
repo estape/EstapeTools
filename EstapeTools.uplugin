@@ -10,7 +10,7 @@
 	"DocsURL": "https://estapetools.xyz/docs",
 	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e1a5a090592c454c816b40452e8cc8de",
 	"SupportURL": "https://estapetools.xyz/",
-	"EngineVersion": "5.4.0",
+	"EngineVersion": "4.27.0",
 	"CanContainContent": false,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
@@ -20,7 +20,7 @@
 			"Name": "EstapeTools",
 			"Type": "Runtime",
 			"LoadingPhase": "PreLoadingScreen",
-			"PlatformAllowList": [
+			"WhitelistPlatforms": [
 				"Win64",
 				"Linux"
 			]

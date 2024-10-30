@@ -1,6 +1,18 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// Fill out your copyright notice in the Description page of Project Settings.
+
 
 #include "WindowsClass.h"
+#undef TEXT
+
+// Definir macros do Windows 10 (Threshold 2, Redstone 1, Redstone 3, Redstone 4)
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0A00  // Define para Windows 10
+#endif
+#define _WIN32_WINNT_WIN10_TH2 0x0A00  // Windows 10 Threshold 2
+#define _WIN32_WINNT_WIN10_RS1 0x0A00  // Windows 10 Redstone 1
+#define _WIN32_WINNT_WIN10_RS3 0x0A00  // Windows 10 Redstone 3
+#define _WIN32_WINNT_WIN10_RS4 0x0A00  // Windows 10 Redstone 4
+
 #if PLATFORM_WINDOWS
 #include <windows.h>
 #include <VersionHelpers.h>
@@ -185,7 +197,7 @@ EDialogButtonClicked UWindowsClass::MessageBox_Windows(const FString& DialogTitl
 #if PLATFORM_WINDOWS
     return static_cast<EDialogButtonClicked>(UWindowsClass::MSGInner(NULL, DialogTitle, DialogMessage, static_cast<uint8>(Buttons) | static_cast<uint8>(Icon)));
 #else
-    return EDialogButtonClicked::None;
+    return EDialogButtonClicked::IDNONE;
 #endif
 }
 
