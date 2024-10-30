@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+﻿// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
 #pragma once
 
@@ -26,25 +26,10 @@ enum class EDialogIcon : uint8
     MB_ICONINFORMATION = 64 UMETA(DisplayName = "Information-point icon")
 };
 
-UENUM(BlueprintType)
-enum class EDialogButtonClicked : uint8
-{
-    IDNONE = 0 UMETA(DisplayName = "None"),
-    IDOK = 1 UMETA(DisplayName = "OK"),
-    IDCANCEL = 2 UMETA(DisplayName = "Cancel"),
-    IDABORT = 3 UMETA(DisplayName = "Abort"),
-    IDRETRY = 4 UMETA(DisplayName = "Retry"),
-    IDIGNORE = 5 UMETA(DisplayName = "Ignore"),
-    IDYES = 6 UMETA(DisplayName = "Yes"),
-    IDNO = 7 UMETA(DisplayName = "No"),
-    IDTRYAGAIN = 10 UMETA(DisplayName = "TryAgain"),
-    IDCONTINUE = 11 UMETA(DisplayName = "Continue")
-};
-
 UCLASS()
 class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
 {
-	GENERATED_UCLASS_BODY()
+    GENERATED_BODY()
 
     // This node inserts a new line by moving the remaining string value to the line below.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|String", meta = (CompactNodeTitle = "GewNewLine", Keywords = "Get New Line"))
@@ -57,14 +42,14 @@ class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
     // Convert a hexadecimal string value into a decimal integer.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "HexToDec", Keywords = "Hexadecimal Decimal Hex Dec"))
     static int32 HexadecimalToDecimal(const FString& HexString);
-    
-	//Convert Color array (8-Bit) to Bytes array.
-    UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "ColorsToBytes", Keywords = "Colors Bytes Array Texture"))
-	static TArray<uint8> ColorsToBytes(const TArray<FColor>& Colors);
 
-	//Convert Bytes array to Color array (8-Bit).
-	UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "BytesToColors", Keywords = "Colors Bytes Array Texture"))
-	static TArray<FColor> BytesToColors(const TArray<uint8>& Bytes);
+    //Convert Color array (8-Bit) to Bytes array.
+    UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "ColorsToBytes", Keywords = "Colors Bytes Array Texture"))
+    static TArray<uint8> ColorsToBytes(const TArray<FColor>& Colors);
+
+    //Convert Bytes array to Color array (8-Bit).
+    UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "BytesToColors", Keywords = "Colors Bytes Array Texture"))
+    static TArray<FColor> BytesToColors(const TArray<uint8>& Bytes);
 
     //Convert String data to bytes array.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "StringToBytes", KeyWords = "parse, convertion, string, bytes"))
@@ -74,11 +59,11 @@ class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities", meta = (CompactNodeTitle = "BytesToString", KeyWords = "parse, convertion, string, bytes"))
     static FString ConvertBytesToString(TArray<uint8> input);
 
-	//Convert an array of Linear Colors to an array of Colors.
+    //Convert an array of Linear Colors to an array of Colors.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|Array", meta = (CompactNodeTitle = "ToArrayLinearColor", Keywords = "Linear Colors convert parse"))
     static TArray<FLinearColor> ArrayColorToArrayLinearColor(const TArray<FColor>& Colors);
 
-	//Convert an array of Colors to an array of Linear Colors.
+    //Convert an array of Colors to an array of Linear Colors.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|Array", meta = (CompactNodeTitle = "ToArrayColor", Keywords = "Linear Colors convert parse"))
     static TArray<FColor> ArrayLinearColorToArrayColor(const TArray<FLinearColor>& LinearColors);
 };

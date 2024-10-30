@@ -1,5 +1,6 @@
 // Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
+
 #include "WindowsClass.h"
 #if PLATFORM_WINDOWS
 #include <windows.h>
@@ -185,7 +186,7 @@ EDialogButtonClicked UWindowsClass::MessageBox_Windows(const FString& DialogTitl
 #if PLATFORM_WINDOWS
     return static_cast<EDialogButtonClicked>(UWindowsClass::MSGInner(NULL, DialogTitle, DialogMessage, static_cast<uint8>(Buttons) | static_cast<uint8>(Icon)));
 #else
-    return EDialogButtonClicked::None;
+    return EDialogButtonClicked::IDNONE;
 #endif
 }
 

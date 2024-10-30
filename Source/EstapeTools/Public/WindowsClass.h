@@ -6,6 +6,26 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "WindowsClass.generated.h"
 
+/**
+ * 
+ */
+
+UENUM(BlueprintType)
+enum class EDialogButtonClicked : uint8
+{
+    IDNONE = 0 UMETA(DisplayName = "None"),
+    IDOK = 1 UMETA(DisplayName = "OK"),
+    IDCANCEL = 2 UMETA(DisplayName = "Cancel"),
+    IDABORT = 3 UMETA(DisplayName = "Abort"),
+    IDRETRY = 4 UMETA(DisplayName = "Retry"),
+    IDIGNORE = 5 UMETA(DisplayName = "Ignore"),
+    IDYES = 6 UMETA(DisplayName = "Yes"),
+    IDNO = 7 UMETA(DisplayName = "No"),
+    IDTRYAGAIN = 10 UMETA(DisplayName = "TryAgain"),
+    IDCONTINUE = 11 UMETA(DisplayName = "Continue")
+};
+
+
 UCLASS()
 class ESTAPETOOLS_API UWindowsClass : public UBlueprintFunctionLibrary
 {
@@ -26,6 +46,6 @@ class ESTAPETOOLS_API UWindowsClass : public UBlueprintFunctionLibrary
     UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Windows")
     static EDialogButtonClicked MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage, EDialogButtons Buttons, EDialogIcon Icon);
 
-    private:
+private:
     static int MSGInner(const void* ParentWindowHandle, const FString& DialogTitle, const FString& DialogMessage, const unsigned int DialogType);
 };

@@ -1,15 +1,8 @@
 // Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
-
 #include "EstapeToolsBPLibrary.h"
 #include "EstapeTools.h"
 #include "Misc/FileHelper.h"
-
-UEstapeToolsBPLibrary::UEstapeToolsBPLibrary(const FObjectInitializer& ObjectInitializer)
-: Super(ObjectInitializer)
-{
-
-}
 
 FString UEstapeToolsBPLibrary::GetNewLine()
 {

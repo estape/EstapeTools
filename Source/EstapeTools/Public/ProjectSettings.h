@@ -1,4 +1,5 @@
 // Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -79,7 +80,7 @@ class ESTAPETOOLS_API UProjectSettings : public UBlueprintFunctionLibrary
 	// Return Allow Window Resize bool from Project Description.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Project|Settings", meta = (Keywords = "Project Allow Window Resize Description Configuration"))
 	static bool GetAllowWindowResize();
-	
+
 	// Return Allow Close bool from Project Description.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Project|Settings", meta = (Keywords = "Project Allow Close Description Configuration"))
 	static bool GetAllowClose();

@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
 #include "EstapeTools.h"
 

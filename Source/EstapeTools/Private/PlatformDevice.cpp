@@ -3,16 +3,16 @@
 
 #include "PlatformDevice.h"
 
-void UPlatformDevice::IsWindowsPlatform(bool &ReturnValue)
+void UPlatformDevice::IsWindowsPlatform(bool& ReturnValue)
 {
 #if PLATFORM_WINDOWS
-	ReturnValue =  true;
+	ReturnValue = true;
 #else
 	ReturnValue = false;
 #endif
 }
 
-void UPlatformDevice::IsMacPlatform(bool &ReturnValue)
+void UPlatformDevice::IsMacPlatform(bool& ReturnValue)
 {
 #if PLATFORM_MAC
 	ReturnValue = true;
@@ -39,7 +39,7 @@ void UPlatformDevice::IsAndroidPlatform(bool& ReturnValue)
 #endif
 }
 
-void UPlatformDevice::IsIOS_Platform(bool &ReturnValue)
+void UPlatformDevice::IsIOS_Platform(bool& ReturnValue)
 {
 #if PLATFORM_IOS
 	ReturnValue = true;
@@ -48,7 +48,7 @@ void UPlatformDevice::IsIOS_Platform(bool &ReturnValue)
 #endif
 }
 
-void UPlatformDevice::IsNintendoSwitch(bool &ReturnValue)
+void UPlatformDevice::IsNintendoSwitch(bool& ReturnValue)
 {
 #if PLATFORM_SWITCH
 	ReturnValue = true;

@@ -16,7 +16,7 @@ class ESTAPETOOLS_API UPlatformDevice : public UBlueprintFunctionLibrary
 	
 	// Check if the current platform is a Windows, return true if it is.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Platforms", meta = (KeyWords = "Get Platform Name Windows"))
-	static void IsWindowsPlatform(bool &ReturnValue);
+	static void IsWindowsPlatform(bool& ReturnValue);
 
 	// Check if the current platform is a Mac, return true if it is.
 	UFUNCTION(BlueprintPure, Category = "EstapeTools|Platforms", meta = (KeyWords = "Get Platform Name Mac"))
