@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// © Rodrigo Estape 2025, this plugin is available ONLY under FAB Marketplace license https://www.fab.com/eula.
 
 #pragma once
 
@@ -24,7 +24,7 @@ class ESTAPETOOLS_API UWindowsClass : public UBlueprintFunctionLibrary
     static bool GetWindowsInfo(int& BuildNumber, FString& VersionName, int& VersionServicePack);
 
     UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Windows")
-    static EDialogButtonClicked MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage, EDialogButtons Buttons, EDialogIcon Icon);
+    static bool MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage, EDialogButtons Buttons, EDialogIcon Icon, EDialogButtonClicked& DialogReturnValue);
 
     private:
     static int MSGInner(const void* ParentWindowHandle, const FString& DialogTitle, const FString& DialogMessage, const unsigned int DialogType);

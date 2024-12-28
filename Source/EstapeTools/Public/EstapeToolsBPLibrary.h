@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// © Rodrigo Estape 2025, this plugin is available ONLY under FAB Marketplace license https://www.fab.com/eula.
 
 #pragma once
 
@@ -40,6 +40,35 @@ enum class EDialogButtonClicked : uint8
     IDTRYAGAIN = 10 UMETA(DisplayName = "TryAgain"),
     IDCONTINUE = 11 UMETA(DisplayName = "Continue")
 };
+USTRUCT(BlueprintType)
+struct FProcessHandle
+{
+    GENERATED_BODY()
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    FString ProgramFolder;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    FString Parameters;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    FString AppName;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    int32 ProcessID;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    int64 MemoryUsage;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    FString StdOut;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    FString StdErr;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EstapeTools|Utilities|Process")
+    FString OptionalWorkingDirectory;
+};
 
 UCLASS()
 class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
@@ -47,7 +76,7 @@ class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
 	GENERATED_UCLASS_BODY()
 
     // This node inserts a new line by moving the remaining string value to the line below.
-    UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|String", meta = (CompactNodeTitle = "GewNewLine", Keywords = "Get New Line"))
+    UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|String", meta = (CompactNodeTitle = "GewNewLine", Keywords = "Get New Line \\n"))
     static FString GetNewLine();
 
     // Convert a decimal value into an integer represented as a hexadecimal string.
@@ -81,4 +110,20 @@ class UEstapeToolsBPLibrary : public UBlueprintFunctionLibrary
 	//Convert an array of Colors to an array of Linear Colors.
     UFUNCTION(BlueprintPure, Category = "EstapeTools|Utilities|Array", meta = (CompactNodeTitle = "ToArrayColor", Keywords = "Linear Colors convert parse"))
     static TArray<FColor> ArrayLinearColorToArrayColor(const TArray<FLinearColor>& LinearColors);
+
+    //Create a new process, in another words this node load a external program.
+    UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Process", meta = (KeyWords = "Create Process External Program Load"))
+    static FProcessHandle CreateProcess(const FString ProgramFolder, const FString Parameters, bool Detached, bool Hidden, bool ReallyHidden, int32 Priority);
+
+    //Create a new process syncronized, in another words this node load a external program and wait util it's finished.
+    UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Process", meta = (KeyWords = "Create Process External Program Load"))
+    static FProcessHandle CreateProcessSync(const FString ProgramFolder, const FString Parameters, bool TerminateParentProcess);
+
+    //Close em terminate all tree associate.
+    UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Process", meta = (KeyWords = "Terminate Process External Program Close"))
+    static bool TerminateProcess(FProcessHandle InputData);
+
+    //Check if process ID is still running..
+    UFUNCTION(BlueprintCallable, Category = "EstapeTools|Utilities|Process", meta = (KeyWords = "Terminate Process External Program Close"))
+    static bool CheckProcessRunning(FProcessHandle InputData);
 };

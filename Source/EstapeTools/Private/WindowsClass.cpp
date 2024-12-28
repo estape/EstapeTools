@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// © Rodrigo Estape 2025, this plugin is available ONLY under FAB Marketplace license https://www.fab.com/eula.
 
 #include "WindowsClass.h"
 #if PLATFORM_WINDOWS
@@ -179,13 +179,13 @@ bool UWindowsClass::GetWindowsInfo(int& BuildNumber, FString& VersionName, int& 
 }
 #endif
 
-EDialogButtonClicked UWindowsClass::MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage,
-    EDialogButtons Buttons, EDialogIcon Icon)
+bool UWindowsClass::MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage, EDialogButtons Buttons, EDialogIcon Icon, EDialogButtonClicked& DialogReturnValue)
 {
 #if PLATFORM_WINDOWS
-    return static_cast<EDialogButtonClicked>(UWindowsClass::MSGInner(NULL, DialogTitle, DialogMessage, static_cast<uint8>(Buttons) | static_cast<uint8>(Icon)));
+    DialogReturnValue = static_cast<EDialogButtonClicked>(UWindowsClass::MSGInner(NULL, DialogTitle, DialogMessage, static_cast<uint8>(Buttons) | static_cast<uint8>(Icon)));
+    return true;
 #else
-    return EDialogButtonClicked::None;
+    return false;
 #endif
 }
 
