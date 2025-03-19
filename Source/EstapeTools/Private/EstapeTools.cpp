@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Rodrigo Estape de Oliveira - Estape Tools v1.0.7
 
 #include "EstapeTools.h"
 
