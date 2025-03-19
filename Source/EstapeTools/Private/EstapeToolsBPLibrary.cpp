@@ -1,4 +1,4 @@
-// Rodrigo Estape de Oliveira - Estape Tools v1.0.7
+// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
 
 #include "EstapeToolsBPLibrary.h"
@@ -119,7 +119,6 @@ TArray<FLinearColor> UEstapeToolsBPLibrary::ArrayColorToArrayLinearColor(const T
 
     return LinearColors;
 }
-
 TArray<FColor> UEstapeToolsBPLibrary::ArrayLinearColorToArrayColor(const TArray<FLinearColor>& LinearColors)
 {
     TArray<FColor> Colors;

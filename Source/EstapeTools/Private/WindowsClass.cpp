@@ -1,4 +1,4 @@
-// Rodrigo Estape de Oliveira - Estape Tools v1.0.7
+// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
 
 #include "WindowsClass.h"
 #if PLATFORM_WINDOWS
@@ -179,13 +179,13 @@ bool UWindowsClass::GetWindowsInfo(int& BuildNumber, FString& VersionName, int& 
 }
 #endif
 
-bool UWindowsClass::MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage, EDialogButtons Buttons, EDialogIcon Icon, EDialogButtonClicked& DialogReturnValue)
+EDialogButtonClicked UWindowsClass::MessageBox_Windows(const FString& DialogTitle, const FString& DialogMessage,
+    EDialogButtons Buttons, EDialogIcon Icon)
 {
 #if PLATFORM_WINDOWS
-    DialogReturnValue = static_cast<EDialogButtonClicked>(UWindowsClass::MSGInner(NULL, DialogTitle, DialogMessage, static_cast<uint8>(Buttons) | static_cast<uint8>(Icon)));
-    return true;
+    return static_cast<EDialogButtonClicked>(UWindowsClass::MSGInner(NULL, DialogTitle, DialogMessage, static_cast<uint8>(Buttons) | static_cast<uint8>(Icon)));
 #else
-    return false;
+    return EDialogButtonClicked::None;
 #endif
 }
 

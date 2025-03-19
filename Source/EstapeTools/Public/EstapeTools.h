@@ -1,4 +1,4 @@
-// Rodrigo Estape de Oliveira - Estape Tools v1.0.7
+// Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
 
