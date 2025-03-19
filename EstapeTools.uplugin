@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0.6",
+	"VersionName": "1.0.7",
 	"FriendlyName": "EstapeTools",
 	"Description": "A pack with essential nodes to improve your workflow and development.",
 	"Category": "Blueprints",
@@ -12,6 +12,8 @@
 	"SupportURL": "https://estapetools.com/",
 	"EngineVersion": "5.4.0",
 	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
@@ -19,8 +21,7 @@
 			"Type": "Runtime",
 			"LoadingPhase": "PreLoadingScreen",
 			"PlatformAllowList": [
-				"Win64",
-				"Linux"
+				"Win64"
 			]
 		}
 	]

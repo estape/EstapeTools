@@ -1,4 +1,4 @@
-// © Rodrigo Estape 2025, this plugin is available ONLY under FAB Marketplace license https://www.fab.com/eula.
+// Rodrigo Estape de Oliveira - Estape Tools v1.0.7
 
 #pragma once
 
@@ -19,7 +19,7 @@ class ESTAPETOOLS_API UFileIO : public UBlueprintFunctionLibrary
     UFUNCTION(BlueprintCallable, Category = "EstapeTools|FileI/O|String", meta = (Keywords = "Save Text File"))
     static bool SaveTextFile(FString StringContent, FString FileName);
 
-    // This node is responsible for creating a text file. With an array input, each index will correspond to a line in the text. It is an excellent choice for saving text or storing string data..
+    // This node is responsible for creating a text file. With an array input, each index will correspond to a line in the text. It is an excellent choice for saving text or storing string data.
     UFUNCTION(BlueprintCallable, Category = "EstapeTools|FileI/O|String", meta = (Keywords = "Save Text File Array"))
     static bool SaveTextArray(TArray<FString> StringContent, FString FileName);
 
