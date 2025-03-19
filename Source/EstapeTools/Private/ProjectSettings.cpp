@@ -1,4 +1,4 @@
-// Rodrigo Estape 2024, this plugin is available ONLY under Unreal Marketplace license.
+// Rodrigo Estape de Oliveira - Estape Tools v1.0.7
 
 #include "ProjectSettings.h"
 #include "Misc/Guid.h"
